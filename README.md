@@ -102,18 +102,21 @@ Clio/
 
 ## Cómo citar Clio
 
+GitHub ya puede leer la metadata de citación desde `CITATION.cff`.
+
 ### Cita sugerida (texto)
 
-`agusnieto77. Clio: Harness agéntico y determinista para OCR histórico, métricas de minería de texto y reportes exploratorios por subcarpeta. Version 0.1.0. GitHub. https://github.com/agusnieto77/Clio`
+`Nieto, Agustín (INHUS-CONICET/UNMDP). Clio: Harness agéntico y determinista para OCR histórico, métricas de minería de texto y reportes exploratorios por subcarpeta. Version 0.1.0. GitHub. https://github.com/agusnieto77/Clio`
 
 ### BibTeX
 
 ```bibtex
 @software{clio_2026,
-  author  = {agusnieto77},
+  author  = {Nieto, Agustín},
   title   = {Clio: Harness ag\'entico y determinista para OCR hist\'orico, m\'etricas de miner\'ia de texto y reportes exploratorios por subcarpeta},
   year    = {2026},
   version = {v0.1.0},
+  note    = {INHUS-CONICET/UNMDP},
   url     = {https://github.com/agusnieto77/Clio}
 }
 ```

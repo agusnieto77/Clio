@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use Clio, please cite it as follows."
+title: "Clio"
+type: software
+authors:
+  - family-names: "Nieto"
+    given-names: "Agustín"
+    affiliation: "INHUS-CONICET/UNMDP"
+repository-code: "https://github.com/agusnieto77/Clio"
+url: "https://github.com/agusnieto77/Clio"
+license: "MIT"
+version: "v0.1.0"
+date-released: "2026-07-07"
+abstract: >-
+  Harness agéntico y determinista para OCR histórico, métricas de minería de
+  texto y reportes exploratorios por subcarpeta.
