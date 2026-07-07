@@ -22,6 +22,12 @@ Con OpenCode:
 /clio Fuentes/MiSubcorpus
 ```
 
+Si antes querés revisar o cambiar los modelos, corré:
+
+```bash
+python harness/tools/configurar_modelos.py
+```
+
 ## 3. Qué produce
 
 ```text

@@ -43,6 +43,29 @@ pip install -r harness/tools/requirements.txt
 
 - **Opcional pero recomendado:** OpenCode / runtime compatible con `.opencode/` para correr el comando `/clio` como flujo completo.
 
+## Configuración inicial de modelos
+
+Si no querés tocar JSON a mano, usá el asistente guiado:
+
+```bash
+python harness/tools/configurar_modelos.py
+```
+
+El script ofrece tres caminos:
+
+1. **Configuración por defecto**
+2. **Configuración recomendada** (la que viene testeada en este repo)
+3. **Configuración guiada paso a paso**
+
+También podés aplicar un preset directo:
+
+```bash
+python harness/tools/configurar_modelos.py --preset default
+python harness/tools/configurar_modelos.py --preset recommended
+```
+
+Clio ya trae un `harness/modelos.json` listo para usar. El asistente reescribe ese archivo y además sincroniza el campo `model:` de `.opencode/agent/*.md`. Después del cambio, **reiniciá OpenCode**.
+
 ## Uso rápido
 
 ### Opción A — flujo completo con agentes
