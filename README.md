@@ -1,5 +1,10 @@
 ﻿# Clio
 
+![Release](https://img.shields.io/github/v/release/agusnieto77/Clio?label=release)
+![License](https://img.shields.io/github/license/agusnieto77/Clio)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Regression tests](https://img.shields.io/badge/regression-15%20tests-green)
+
 Harness agéntico y determinista para procesar corpus documentales fotografiados: OCR histórico, métricas de minería de texto y reportes exploratorios por subcarpeta.
 
 ## Qué hace
@@ -94,6 +99,24 @@ Clio/
 - `docs/instalacion.md`
 - `docs/uso.md`
 - `docs/formato-del-corpus.md`
+
+## Cómo citar Clio
+
+### Cita sugerida (texto)
+
+`agusnieto77. Clio: Harness agéntico y determinista para OCR histórico, métricas de minería de texto y reportes exploratorios por subcarpeta. Version 0.1.0. GitHub. https://github.com/agusnieto77/Clio`
+
+### BibTeX
+
+```bibtex
+@software{clio_2026,
+  author  = {agusnieto77},
+  title   = {Clio: Harness ag\'entico y determinista para OCR hist\'orico, m\'etricas de miner\'ia de texto y reportes exploratorios por subcarpeta},
+  year    = {2026},
+  version = {v0.1.0},
+  url     = {https://github.com/agusnieto77/Clio}
+}
+```
 
 ## Licencia
 
