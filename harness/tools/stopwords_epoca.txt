@@ -1,0 +1,59 @@
+"""
+Stopwords funcionales en español, complemento de la lista de NLTK.
+Una palabra por linea. Lineas vacias o que empiezan con '#' se ignoran.
+Edicion libre por el investigador para incorporar vocabulario de epoca o del rubro.
+"""
+# Tratamientos formales y de correspondencia
+senor
+senores
+senora
+senoritas
+estimado
+estimados
+estimada
+atte
+atentamente
+srs
+sras
+sr
+sra
+# Abreviaturas de uso administrativo
+adj
+adjunto
+c c
+cc
+c/c
+pag
+pág
+fs
+folio
+# Locuciones de cortesia
+saluda
+saludo
+cordialmente
+distinguido
+distinguidos
+# Muletillas documentales
+conste
+certifico
+declaro
+# Dias y meses (cuando aparecen como cabecera de oficio)
+enero
+febrero
+marzo
+abril
+mayo
+junio
+julio
+agosto
+septiembre
+octubre
+noviembre
+diciembre
+lunes
+martes
+miercoles
+jueves
+viernes
+sabado
+domingo

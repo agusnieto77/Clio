@@ -1,0 +1,65 @@
+{
+  "_doc": "Configuracion de modelos principal y de respaldo por agente del harness Clio. Modificable por el investigador. El script harness/tools/swap_modelo.py lee este archivo y reescribe .opencode/agent/<rol>.md cuando se intercambia principal por respaldo. Los IDs llevan prefijo de proveedor exigido por OpenCode.",
+  "version": 1,
+  "nota_runtime": "Los IDs declarados en este archivo son la fuente de verdad del harness Clio para modelos principal y respaldo. El frontmatter de .opencode/agent/<rol>.md debe reflejar el principal, salvo cuando swap_modelo.py lo haya cambiado temporalmente al respaldo. Si el investigador migra el harness a otro runtime, debe reemplazar cada id_opencode por el ID equivalente con su prefijo de proveedor (por ejemplo 'anthropic/claude-sonnet-4-5' o 'openai/gpt-4o'). El mecanismo de respaldo es declarativo: OpenCode fija el modelo en la definicion del subagente, por lo que el intercambio se ejecuta via swap_modelo.py, no en caliente.",
+  "agentes": {
+    "clio": {
+      "rol": "Orquestadora. No ejecuta tareas tecnicas. Coordina y registra.",
+      "necesita_vision": false,
+      "principal": {
+        "id_opencode": "minimax/MiniMax-M3",
+        "nota": "Modelo de texto razonador para planificar y delegar."
+      },
+      "respaldo": {
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Modelo de texto anterior. Usar si el principal no esta disponible o falla repetidamente. Si tampoco esta disponible, documentarlo y detener el flujo."
+      }
+    },
+    "ocr-historico": {
+      "rol": "Subagente OCR. Transcribe fotografias de documentacion mecanografiada y prensa del siglo XX.",
+      "necesita_vision": true,
+      "principal": {
+        "id_opencode": "minimax/MiniMax-M3",
+        "nota": "Modelo con capacidad de vision. Abre la imagen con la tool read y transcribe preservando layout y ortografia de epoca."
+      },
+      "respaldo": {
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Modelo de vision anterior. Usar si el principal no puede leer una imagen o falla repetidamente. Si no esta disponible en el runtime, dejar la imagen en estado 'error' y reportar a Clio para revision manual."
+      }
+    },
+    "analista-cuantitativo": {
+      "rol": "Subagente analista. Ejecuta metricas en Python (frecuencia, co-ocurrencia, correlacion, TF-IDF).",
+      "necesita_vision": false,
+      "principal": {
+        "id_opencode": "minimax/MiniMax-M3",
+        "nota": "Modelo de texto. No calcula metricas: solo decide que comando Python ejecutar, lee resultados y reporta a Clio. El calculo es 100% Python determinista."
+      },
+      "respaldo": {
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Modelo de texto anterior. Solo relevante si el subagente no arranca. Los calculos en Python no dependen del modelo."
+      }
+    },
+    "redactor-informes": {
+      "rol": "Subagente redactor. Produce informe preliminar HTML y informe final Markdown a partir de datos ya generados.",
+      "necesita_vision": false,
+      "principal": {
+        "id_opencode": "minimax/MiniMax-M3",
+        "nota": "Modelo de texto de capacidad alta para interpretar patrones en las metricas y redactar el informe final en español rioplatense neutro, sin jerga de programacion."
+      },
+      "respaldo": {
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Modelo de texto anterior. Usar si el principal falla. Verificar calidad de redaccion antes de aceptar el entregable."
+      }
+    }
+  },
+  "parametros_analisis": {
+    "ventana_cocurrencia": 5,
+    "stopwords_idioma": "español",
+    "normalizacion_ortografica": "no_aplicar_en_transcripcion_primaria",
+    "stopwords_fuente": "nltk.corpus.stopwords (spa) complementada con lista local de epoca",
+    "tfidf_norma": "l2",
+    "tfidf_sublinear_tf": true,
+    "min_longitud_token": 2,
+    "top_n_frecuencia": 10
+  }
+}
