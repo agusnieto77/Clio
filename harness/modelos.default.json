@@ -1,0 +1,66 @@
+{
+  "_doc": "Preset default de Clio. Pensado como punto de partida simple para usuarios no técnicos. El setup guiado puede copiar este archivo a modelos.json y sincronizar los agentes.",
+  "version": 1,
+  "preset": "default",
+  "nota_runtime": "Esta configuracion privilegia menor friccion para roles de texto y deja el OCR con un modelo principal de vision robusto. El frontmatter de .opencode/agent/<rol>.md debe reflejar siempre el principal vigente.",
+  "agentes": {
+    "clio": {
+      "rol": "Orquestadora. No ejecuta tareas tecnicas. Coordina y registra.",
+      "necesita_vision": false,
+      "principal": {
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Punto de partida simple para orquestacion textual."
+      },
+      "respaldo": {
+        "id_opencode": "minimax/MiniMax-M3",
+        "nota": "Respaldo si el principal no esta disponible o falla repetidamente."
+      }
+    },
+    "ocr-historico": {
+      "rol": "Subagente OCR. Transcribe fotografias de documentacion mecanografiada y prensa del siglo XX.",
+      "necesita_vision": true,
+      "principal": {
+        "id_opencode": "minimax/MiniMax-M3",
+        "nota": "Modelo principal de vision para OCR historico."
+      },
+      "respaldo": {
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Respaldo de vision si el principal falla."
+      }
+    },
+    "analista-cuantitativo": {
+      "rol": "Subagente analista. Ejecuta metricas en Python (frecuencia, co-ocurrencia, correlacion, TF-IDF).",
+      "necesita_vision": false,
+      "principal": {
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Modelo de texto suficiente para lanzar y reportar calculos deterministas."
+      },
+      "respaldo": {
+        "id_opencode": "minimax/MiniMax-M3",
+        "nota": "Respaldo si el principal no arranca o no esta disponible."
+      }
+    },
+    "redactor-informes": {
+      "rol": "Subagente redactor. Produce informe preliminar HTML y informe final Markdown a partir de datos ya generados.",
+      "necesita_vision": false,
+      "principal": {
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Punto de partida simple para redaccion inicial."
+      },
+      "respaldo": {
+        "id_opencode": "minimax/MiniMax-M3",
+        "nota": "Respaldo de mayor capacidad si el principal falla o no alcanza."
+      }
+    }
+  },
+  "parametros_analisis": {
+    "ventana_cocurrencia": 5,
+    "stopwords_idioma": "español",
+    "normalizacion_ortografica": "no_aplicar_en_transcripcion_primaria",
+    "stopwords_fuente": "nltk.corpus.stopwords (spa) complementada con lista local de epoca",
+    "tfidf_norma": "l2",
+    "tfidf_sublinear_tf": true,
+    "min_longitud_token": 2,
+    "top_n_frecuencia": 10
+  }
+}
