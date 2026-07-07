@@ -5,5 +5,6 @@
 .opencode/package-lock.json
 .opencode/package.json
 Fuentes/_tmp_*/
+harness/modelos.backup.*.json
 .DS_Store
 Thumbs.db
