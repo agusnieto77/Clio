@@ -1,0 +1,65 @@
+{
+  "imagenes": {
+    "1943-08-22 - CORS Acta reunión 1.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:08:12",
+      "detalle_error": null
+    },
+    "1943-08-22 - CORS Acta reunión 10.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:16:02",
+      "detalle_error": null
+    },
+    "1943-08-22 - CORS Acta reunión 2.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:08:53",
+      "detalle_error": null
+    },
+    "1943-08-22 - CORS Acta reunión 3.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:09:35",
+      "detalle_error": null
+    },
+    "1943-08-22 - CORS Acta reunión 4.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:10:15",
+      "detalle_error": null
+    },
+    "1943-08-22 - CORS Acta reunión 5.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:10:54",
+      "detalle_error": null
+    },
+    "1943-08-22 - CORS Acta reunión 6.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:11:48",
+      "detalle_error": null
+    },
+    "1943-08-22 - CORS Acta reunión 7.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:12:43",
+      "detalle_error": null
+    },
+    "1943-08-22 - CORS Acta reunión 8.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:13:46",
+      "detalle_error": null
+    },
+    "1943-08-22 - CORS Acta reunión 9.jpg": {
+      "estado": "procesada",
+      "intentos": 0,
+      "ultima_actualizacion": "2026-07-07T17:14:56",
+      "detalle_error": null
+    }
+  },
+  "actualizado": "2026-07-07T17:16:02"
+}

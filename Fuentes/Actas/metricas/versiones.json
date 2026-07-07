@@ -1,0 +1,26 @@
+{
+  "python": "3.13.14",
+  "librerias": {
+    "nltk": "3.9.1",
+    "scikit-learn": "1.5.2",
+    "pandas": "2.2.3",
+    "networkx": "3.4.2",
+    "scipy": "1.14.1",
+    "numpy": "2.1.3"
+  },
+  "parametros": {
+    "ventana_cocurrencia": 5,
+    "stopwords_idioma": "español",
+    "stopwords_fuente": "nltk.corpus.stopwords.words('spanish') + harness/tools/stopwords_epoca.txt",
+    "min_longitud_token": 2,
+    "top_n_frecuencia": 10,
+    "tfidf_norma": "l2",
+    "tfidf_sublinear_tf": true,
+    "normalizacion_aplicada": "minusculas; sin stemming ni lematizacion; ortografia de epoca preservada",
+    "tokenizador_regex": "[A-Za-zÁÉÍÓÚáéíóúÑñÜü]+"
+  },
+  "resumen_corpus": {
+    "n_documentos": 10,
+    "n_terminos_unicos": 1385
+  }
+}

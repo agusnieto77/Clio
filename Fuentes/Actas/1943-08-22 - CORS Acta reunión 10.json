@@ -1,0 +1,13 @@
+{
+  "imagen": "1943-08-22 - CORS Acta reunión 10.jpg",
+  "base": "1943-08-22 - CORS Acta reunión 10",
+  "tipo_documento_detectado": "acta_reunion_cierre_resolucion",
+  "layout": {
+    "orientacion": "vertical",
+    "columnas": 1,
+    "zonas": ["encabezado_pagina", "cuerpo", "resolucion", "firma"]
+  },
+  "transcripcion": "-- hoja 10 --\n\n[CUERPO]\nPINTORES NAVALES.-Sciarrocha y Novoa) Son partidarios, de acuerdo lamandato que traen, que lapróxima reunión la convoquen determinadas organizaciones autónomas, sin mencionar para nada a la CORS.\n\nCABRERA, CORREALE Y OTROS.- Intervienen en el cambio de impresiones que origina la proposición de pintores navales, y se llega AÍ a la conclusión de que las organizaciones que podrían suscribir la invitación son las mismas que integran la CORS, que como su nombre lo dice es una comisión relacionadora. Sería absurdo, dicen, cambiar de nombre todos los días.\n\n-----------------OO------------------\n\nFinalmente se adopto lasiguiente\n\nRESOLUCION\n\n1º Elevar un memorial al poder Ejecutivo impugnando el decreto sobre asociaciones profesionales.\n\n2º Designar una comisión redactora --integrada por Correale Balbuena y Touceda-- que someta a consideración de la próxima reunión el proyecto de memorial.\n\n3º Autorizar a las organizaciones presentes para que sometan el memorial a la firma de todas aquellas entidades sindicales con las cuales mantengan relaciones.\n\n4º Encarcar al secretario de la CORS que convoque la próxima reunión en el lugar y fecha que estime oportuno, haciendo extensiva la invitación a los autónomos y de la FORA que no concurrieron a esta.\n\n[FIRMA]\nJoaquín Palacios\nSecretario de actas",
+  "notas_ocr": "Hoja 10 (final). Resolucion formal en cuatro puntos. Firma mecanografiada del Secretario de actas. Esquina superior izquierda con solapa de otro folio (no afecta contenido del acta). Mecanografía clara.",
+  "modelo_utilizado": "minimax/MiniMax-M3"
+}

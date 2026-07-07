@@ -1,0 +1,728 @@
+{
+  "top_n": 20,
+  "n_documentos": 10,
+  "terminos": [
+    "cuerpo",
+    "organizaciones",
+    "decreto",
+    "mar",
+    "plata",
+    "reunión",
+    "dice",
+    "hoja",
+    "obrera",
+    "movimiento",
+    "obrero",
+    "navales",
+    "pintores",
+    "sindicato",
+    "local",
+    "problema",
+    "memorial",
+    "delegados",
+    "federación",
+    "sanitaria"
+  ],
+  "pares_por_valor_absoluto": [
+    {
+      "par": [
+        "mar",
+        "plata"
+      ],
+      "correlacion_pearson": 1.0
+    },
+    {
+      "par": [
+        "movimiento",
+        "obrero"
+      ],
+      "correlacion_pearson": 1.0
+    },
+    {
+      "par": [
+        "navales",
+        "sanitaria"
+      ],
+      "correlacion_pearson": 0.8018
+    },
+    {
+      "par": [
+        "local",
+        "delegados"
+      ],
+      "correlacion_pearson": 0.8018
+    },
+    {
+      "par": [
+        "obrera",
+        "sindicato"
+      ],
+      "correlacion_pearson": 0.7638
+    },
+    {
+      "par": [
+        "obrera",
+        "local"
+      ],
+      "correlacion_pearson": 0.7638
+    },
+    {
+      "par": [
+        "mar",
+        "obrera"
+      ],
+      "correlacion_pearson": 0.6667
+    },
+    {
+      "par": [
+        "mar",
+        "movimiento"
+      ],
+      "correlacion_pearson": 0.6667
+    },
+    {
+      "par": [
+        "mar",
+        "obrero"
+      ],
+      "correlacion_pearson": 0.6667
+    },
+    {
+      "par": [
+        "plata",
+        "obrera"
+      ],
+      "correlacion_pearson": 0.6667
+    },
+    {
+      "par": [
+        "plata",
+        "movimiento"
+      ],
+      "correlacion_pearson": 0.6667
+    },
+    {
+      "par": [
+        "plata",
+        "obrero"
+      ],
+      "correlacion_pearson": 0.6667
+    },
+    {
+      "par": [
+        "hoja",
+        "movimiento"
+      ],
+      "correlacion_pearson": 0.6667
+    },
+    {
+      "par": [
+        "hoja",
+        "obrero"
+      ],
+      "correlacion_pearson": 0.6667
+    },
+    {
+      "par": [
+        "obrera",
+        "delegados"
+      ],
+      "correlacion_pearson": 0.6124
+    },
+    {
+      "par": [
+        "delegados",
+        "federación"
+      ],
+      "correlacion_pearson": 0.5833
+    },
+    {
+      "par": [
+        "pintores",
+        "federación"
+      ],
+      "correlacion_pearson": -0.5345
+    },
+    {
+      "par": [
+        "memorial",
+        "federación"
+      ],
+      "correlacion_pearson": -0.5345
+    },
+    {
+      "par": [
+        "pintores",
+        "memorial"
+      ],
+      "correlacion_pearson": 0.5238
+    },
+    {
+      "par": [
+        "sindicato",
+        "local"
+      ],
+      "correlacion_pearson": 0.5238
+    },
+    {
+      "par": [
+        "decreto",
+        "problema"
+      ],
+      "correlacion_pearson": 0.5092
+    },
+    {
+      "par": [
+        "mar",
+        "sindicato"
+      ],
+      "correlacion_pearson": 0.5092
+    },
+    {
+      "par": [
+        "mar",
+        "local"
+      ],
+      "correlacion_pearson": 0.5092
+    },
+    {
+      "par": [
+        "mar",
+        "problema"
+      ],
+      "correlacion_pearson": 0.5092
+    },
+    {
+      "par": [
+        "plata",
+        "sindicato"
+      ],
+      "correlacion_pearson": 0.5092
+    },
+    {
+      "par": [
+        "plata",
+        "local"
+      ],
+      "correlacion_pearson": 0.5092
+    },
+    {
+      "par": [
+        "plata",
+        "problema"
+      ],
+      "correlacion_pearson": 0.5092
+    },
+    {
+      "par": [
+        "reunión",
+        "local"
+      ],
+      "correlacion_pearson": 0.5092
+    },
+    {
+      "par": [
+        "hoja",
+        "memorial"
+      ],
+      "correlacion_pearson": 0.5092
+    },
+    {
+      "par": [
+        "navales",
+        "local"
+      ],
+      "correlacion_pearson": -0.4286
+    },
+    {
+      "par": [
+        "navales",
+        "problema"
+      ],
+      "correlacion_pearson": -0.4286
+    },
+    {
+      "par": [
+        "problema",
+        "memorial"
+      ],
+      "correlacion_pearson": -0.4286
+    },
+    {
+      "par": [
+        "decreto",
+        "federación"
+      ],
+      "correlacion_pearson": 0.4082
+    },
+    {
+      "par": [
+        "mar",
+        "delegados"
+      ],
+      "correlacion_pearson": 0.4082
+    },
+    {
+      "par": [
+        "mar",
+        "federación"
+      ],
+      "correlacion_pearson": 0.4082
+    },
+    {
+      "par": [
+        "mar",
+        "sanitaria"
+      ],
+      "correlacion_pearson": 0.4082
+    },
+    {
+      "par": [
+        "plata",
+        "delegados"
+      ],
+      "correlacion_pearson": 0.4082
+    },
+    {
+      "par": [
+        "plata",
+        "federación"
+      ],
+      "correlacion_pearson": 0.4082
+    },
+    {
+      "par": [
+        "plata",
+        "sanitaria"
+      ],
+      "correlacion_pearson": 0.4082
+    },
+    {
+      "par": [
+        "reunión",
+        "delegados"
+      ],
+      "correlacion_pearson": 0.4082
+    },
+    {
+      "par": [
+        "reunión",
+        "federación"
+      ],
+      "correlacion_pearson": 0.4082
+    },
+    {
+      "par": [
+        "obrera",
+        "movimiento"
+      ],
+      "correlacion_pearson": 0.375
+    },
+    {
+      "par": [
+        "obrera",
+        "obrero"
+      ],
+      "correlacion_pearson": 0.375
+    },
+    {
+      "par": [
+        "sindicato",
+        "delegados"
+      ],
+      "correlacion_pearson": 0.3563
+    },
+    {
+      "par": [
+        "sindicato",
+        "sanitaria"
+      ],
+      "correlacion_pearson": 0.3563
+    },
+    {
+      "par": [
+        "local",
+        "federación"
+      ],
+      "correlacion_pearson": 0.3563
+    },
+    {
+      "par": [
+        "problema",
+        "federación"
+      ],
+      "correlacion_pearson": 0.3563
+    },
+    {
+      "par": [
+        "obrera",
+        "navales"
+      ],
+      "correlacion_pearson": -0.3273
+    },
+    {
+      "par": [
+        "movimiento",
+        "navales"
+      ],
+      "correlacion_pearson": -0.3273
+    },
+    {
+      "par": [
+        "movimiento",
+        "pintores"
+      ],
+      "correlacion_pearson": -0.3273
+    },
+    {
+      "par": [
+        "obrero",
+        "navales"
+      ],
+      "correlacion_pearson": -0.3273
+    },
+    {
+      "par": [
+        "obrero",
+        "pintores"
+      ],
+      "correlacion_pearson": -0.3273
+    },
+    {
+      "par": [
+        "decreto",
+        "delegados"
+      ],
+      "correlacion_pearson": -0.2722
+    },
+    {
+      "par": [
+        "decreto",
+        "sanitaria"
+      ],
+      "correlacion_pearson": -0.2722
+    },
+    {
+      "par": [
+        "reunión",
+        "sanitaria"
+      ],
+      "correlacion_pearson": -0.2722
+    },
+    {
+      "par": [
+        "dice",
+        "delegados"
+      ],
+      "correlacion_pearson": -0.2722
+    },
+    {
+      "par": [
+        "dice",
+        "federación"
+      ],
+      "correlacion_pearson": -0.2722
+    },
+    {
+      "par": [
+        "dice",
+        "sanitaria"
+      ],
+      "correlacion_pearson": -0.2722
+    },
+    {
+      "par": [
+        "hoja",
+        "delegados"
+      ],
+      "correlacion_pearson": -0.2722
+    },
+    {
+      "par": [
+        "hoja",
+        "federación"
+      ],
+      "correlacion_pearson": -0.2722
+    },
+    {
+      "par": [
+        "hoja",
+        "sanitaria"
+      ],
+      "correlacion_pearson": -0.2722
+    },
+    {
+      "par": [
+        "decreto",
+        "navales"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "decreto",
+        "pintores"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "decreto",
+        "sindicato"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "decreto",
+        "local"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "decreto",
+        "memorial"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "mar",
+        "navales"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "mar",
+        "pintores"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "mar",
+        "memorial"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "plata",
+        "navales"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "plata",
+        "pintores"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "plata",
+        "memorial"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "reunión",
+        "navales"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "reunión",
+        "pintores"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "reunión",
+        "sindicato"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "reunión",
+        "problema"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "reunión",
+        "memorial"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "dice",
+        "navales"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "dice",
+        "pintores"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "dice",
+        "sindicato"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "dice",
+        "local"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "dice",
+        "problema"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "dice",
+        "memorial"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "hoja",
+        "navales"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "hoja",
+        "pintores"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "hoja",
+        "sindicato"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "hoja",
+        "local"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "hoja",
+        "problema"
+      ],
+      "correlacion_pearson": -0.2182
+    },
+    {
+      "par": [
+        "obrera",
+        "pintores"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "obrera",
+        "problema"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "obrera",
+        "memorial"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "movimiento",
+        "sindicato"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "movimiento",
+        "local"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "movimiento",
+        "problema"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "movimiento",
+        "memorial"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "obrero",
+        "sindicato"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "obrero",
+        "local"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "obrero",
+        "problema"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "obrero",
+        "memorial"
+      ],
+      "correlacion_pearson": 0.2182
+    },
+    {
+      "par": [
+        "decreto",
+        "obrera"
+      ],
+      "correlacion_pearson": -0.1667
+    }
+  ]
+}

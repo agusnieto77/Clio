@@ -1,0 +1,1629 @@
+{
+  "norma": "l2",
+  "sublinear_tf": true,
+  "n_documentos": 10,
+  "por_documento": {
+    "1943-08-22 - CORS Acta reunión 1": [
+      {
+        "termino": "de",
+        "peso": 0.1293
+      },
+      {
+        "termino": "albañiles",
+        "peso": 0.1292
+      },
+      {
+        "termino": "frente",
+        "peso": 0.1292
+      },
+      {
+        "termino": "cors",
+        "peso": 0.1286
+      },
+      {
+        "termino": "administrativo",
+        "peso": 0.1227
+      },
+      {
+        "termino": "acta",
+        "peso": 0.1227
+      },
+      {
+        "termino": "recuerda",
+        "peso": 0.1227
+      },
+      {
+        "termino": "mandato",
+        "peso": 0.1131
+      },
+      {
+        "termino": "reuniones",
+        "peso": 0.1043
+      },
+      {
+        "termino": "reglamentario",
+        "peso": 0.1043
+      },
+      {
+        "termino": "secretario",
+        "peso": 0.1043
+      },
+      {
+        "termino": "adoptar",
+        "peso": 0.1043
+      },
+      {
+        "termino": "conjunta",
+        "peso": 0.1043
+      },
+      {
+        "termino": "delegados",
+        "peso": 0.1015
+      },
+      {
+        "termino": "la",
+        "peso": 0.101
+      },
+      {
+        "termino": "consejo",
+        "peso": 0.1005
+      },
+      {
+        "termino": "construcción",
+        "peso": 0.1005
+      },
+      {
+        "termino": "que",
+        "peso": 0.0975
+      },
+      {
+        "termino": "relaciones",
+        "peso": 0.0912
+      },
+      {
+        "termino": "actitud",
+        "peso": 0.0912
+      },
+      {
+        "termino": "sindicales",
+        "peso": 0.0912
+      },
+      {
+        "termino": "el",
+        "peso": 0.0856
+      },
+      {
+        "termino": "navales",
+        "peso": 0.0843
+      },
+      {
+        "termino": "del",
+        "peso": 0.0819
+      },
+      {
+        "termino": "asociaciones",
+        "peso": 0.0811
+      },
+      {
+        "termino": "los",
+        "peso": 0.0789
+      },
+      {
+        "termino": "en",
+        "peso": 0.0789
+      },
+      {
+        "termino": "pintores",
+        "peso": 0.0741
+      },
+      {
+        "termino": "profesionales",
+        "peso": 0.0728
+      },
+      {
+        "termino": "han",
+        "peso": 0.0728
+      }
+    ],
+    "1943-08-22 - CORS Acta reunión 10": [
+      {
+        "termino": "invitación",
+        "peso": 0.1804
+      },
+      {
+        "termino": "cors",
+        "peso": 0.1663
+      },
+      {
+        "termino": "secretario",
+        "peso": 0.1534
+      },
+      {
+        "termino": "próxima",
+        "peso": 0.1534
+      },
+      {
+        "termino": "la",
+        "peso": 0.1373
+      },
+      {
+        "termino": "que",
+        "peso": 0.1373
+      },
+      {
+        "termino": "de",
+        "peso": 0.1338
+      },
+      {
+        "termino": "correale",
+        "peso": 0.1193
+      },
+      {
+        "termino": "nombre",
+        "peso": 0.1193
+      },
+      {
+        "termino": "firma",
+        "peso": 0.1193
+      },
+      {
+        "termino": "memorial",
+        "peso": 0.109
+      },
+      {
+        "termino": "comisión",
+        "peso": 0.1071
+      },
+      {
+        "termino": "mantengan",
+        "peso": 0.1065
+      },
+      {
+        "termino": "oo",
+        "peso": 0.1065
+      },
+      {
+        "termino": "impresiones",
+        "peso": 0.1065
+      },
+      {
+        "termino": "novoa",
+        "peso": 0.1065
+      },
+      {
+        "termino": "impugnando",
+        "peso": 0.1065
+      },
+      {
+        "termino": "suscribir",
+        "peso": 0.1065
+      },
+      {
+        "termino": "llega",
+        "peso": 0.1065
+      },
+      {
+        "termino": "lamandato",
+        "peso": 0.1065
+      },
+      {
+        "termino": "someta",
+        "peso": 0.1065
+      },
+      {
+        "termino": "podrían",
+        "peso": 0.1065
+      },
+      {
+        "termino": "lasiguiente",
+        "peso": 0.1065
+      },
+      {
+        "termino": "absurdo",
+        "peso": 0.1065
+      },
+      {
+        "termino": "relacionadora",
+        "peso": 0.1065
+      },
+      {
+        "termino": "determinadas",
+        "peso": 0.1065
+      },
+      {
+        "termino": "resolucion",
+        "peso": 0.1065
+      },
+      {
+        "termino": "sometan",
+        "peso": 0.1065
+      },
+      {
+        "termino": "dicen",
+        "peso": 0.1065
+      },
+      {
+        "termino": "días",
+        "peso": 0.1065
+      }
+    ],
+    "1943-08-22 - CORS Acta reunión 2": [
+      {
+        "termino": "puntos",
+        "peso": 0.1164
+      },
+      {
+        "termino": "de",
+        "peso": 0.1137
+      },
+      {
+        "termino": "inmediato",
+        "peso": 0.1105
+      },
+      {
+        "termino": "expresó",
+        "peso": 0.1105
+      },
+      {
+        "termino": "que",
+        "peso": 0.0998
+      },
+      {
+        "termino": "fué",
+        "peso": 0.0939
+      },
+      {
+        "termino": "varios",
+        "peso": 0.0939
+      },
+      {
+        "termino": "compañero",
+        "peso": 0.0939
+      },
+      {
+        "termino": "vista",
+        "peso": 0.0939
+      },
+      {
+        "termino": "anteriores",
+        "peso": 0.0939
+      },
+      {
+        "termino": "necesario",
+        "peso": 0.0939
+      },
+      {
+        "termino": "sosa",
+        "peso": 0.0939
+      },
+      {
+        "termino": "otra",
+        "peso": 0.0939
+      },
+      {
+        "termino": "reuniones",
+        "peso": 0.0939
+      },
+      {
+        "termino": "la",
+        "peso": 0.0925
+      },
+      {
+        "termino": "presidente",
+        "peso": 0.0924
+      },
+      {
+        "termino": "el",
+        "peso": 0.091
+      },
+      {
+        "termino": "delegado",
+        "peso": 0.0905
+      },
+      {
+        "termino": "los",
+        "peso": 0.0841
+      },
+      {
+        "termino": "en",
+        "peso": 0.0841
+      },
+      {
+        "termino": "delegados",
+        "peso": 0.0836
+      },
+      {
+        "termino": "resumen",
+        "peso": 0.0822
+      },
+      {
+        "termino": "debate",
+        "peso": 0.0822
+      },
+      {
+        "termino": "presidencia",
+        "peso": 0.0822
+      },
+      {
+        "termino": "del",
+        "peso": 0.0778
+      },
+      {
+        "termino": "por",
+        "peso": 0.0743
+      },
+      {
+        "termino": "las",
+        "peso": 0.0743
+      },
+      {
+        "termino": "un",
+        "peso": 0.0743
+      },
+      {
+        "termino": "contra",
+        "peso": 0.0735
+      },
+      {
+        "termino": "sanitaria",
+        "peso": 0.0735
+      }
+    ],
+    "1943-08-22 - CORS Acta reunión 3": [
+      {
+        "termino": "posibilidades",
+        "peso": 0.1176
+      },
+      {
+        "termino": "tachado",
+        "peso": 0.1116
+      },
+      {
+        "termino": "resitencia",
+        "peso": 0.1116
+      },
+      {
+        "termino": "reconocimiento",
+        "peso": 0.1116
+      },
+      {
+        "termino": "cien",
+        "peso": 0.1116
+      },
+      {
+        "termino": "pasiva",
+        "peso": 0.1116
+      },
+      {
+        "termino": "la",
+        "peso": 0.1088
+      },
+      {
+        "termino": "de",
+        "peso": 0.1088
+      },
+      {
+        "termino": "que",
+        "peso": 0.1028
+      },
+      {
+        "termino": "buscar",
+        "peso": 0.0949
+      },
+      {
+        "termino": "actas",
+        "peso": 0.0949
+      },
+      {
+        "termino": "lópez",
+        "peso": 0.0949
+      },
+      {
+        "termino": "siempre",
+        "peso": 0.0949
+      },
+      {
+        "termino": "el",
+        "peso": 0.0869
+      },
+      {
+        "termino": "sindicato",
+        "peso": 0.0838
+      },
+      {
+        "termino": "expresa",
+        "peso": 0.083
+      },
+      {
+        "termino": "idea",
+        "peso": 0.083
+      },
+      {
+        "termino": "resistencia",
+        "peso": 0.083
+      },
+      {
+        "termino": "vicente",
+        "peso": 0.083
+      },
+      {
+        "termino": "opinión",
+        "peso": 0.083
+      },
+      {
+        "termino": "condiciones",
+        "peso": 0.083
+      },
+      {
+        "termino": "caso",
+        "peso": 0.083
+      },
+      {
+        "termino": "los",
+        "peso": 0.0828
+      },
+      {
+        "termino": "se",
+        "peso": 0.0805
+      },
+      {
+        "termino": "las",
+        "peso": 0.0779
+      },
+      {
+        "termino": "es",
+        "peso": 0.0745
+      },
+      {
+        "termino": "situación",
+        "peso": 0.0742
+      },
+      {
+        "termino": "ha",
+        "peso": 0.0742
+      },
+      {
+        "termino": "construccion",
+        "peso": 0.0742
+      },
+      {
+        "termino": "posible",
+        "peso": 0.0738
+      }
+    ],
+    "1943-08-22 - CORS Acta reunión 4": [
+      {
+        "termino": "vengan",
+        "peso": 0.133
+      },
+      {
+        "termino": "unidad",
+        "peso": 0.1316
+      },
+      {
+        "termino": "clase",
+        "peso": 0.113
+      },
+      {
+        "termino": "la",
+        "peso": 0.1074
+      },
+      {
+        "termino": "quieran",
+        "peso": 0.1073
+      },
+      {
+        "termino": "político",
+        "peso": 0.1073
+      },
+      {
+        "termino": "reconocería",
+        "peso": 0.1073
+      },
+      {
+        "termino": "tan",
+        "peso": 0.1073
+      },
+      {
+        "termino": "sacrificio",
+        "peso": 0.1073
+      },
+      {
+        "termino": "unirnos",
+        "peso": 0.1073
+      },
+      {
+        "termino": "nuevamente",
+        "peso": 0.1073
+      },
+      {
+        "termino": "campaña",
+        "peso": 0.1073
+      },
+      {
+        "termino": "pone",
+        "peso": 0.1073
+      },
+      {
+        "termino": "que",
+        "peso": 0.0998
+      },
+      {
+        "termino": "de",
+        "peso": 0.0988
+      },
+      {
+        "termino": "trabajadora",
+        "peso": 0.0912
+      },
+      {
+        "termino": "los",
+        "peso": 0.0852
+      },
+      {
+        "termino": "con",
+        "peso": 0.0835
+      },
+      {
+        "termino": "el",
+        "peso": 0.0816
+      },
+      {
+        "termino": "pero",
+        "peso": 0.0812
+      },
+      {
+        "termino": "nos",
+        "peso": 0.0812
+      },
+      {
+        "termino": "sector",
+        "peso": 0.0798
+      },
+      {
+        "termino": "textualmente",
+        "peso": 0.0798
+      },
+      {
+        "termino": "del",
+        "peso": 0.079
+      },
+      {
+        "termino": "obreros",
+        "peso": 0.079
+      },
+      {
+        "termino": "por",
+        "peso": 0.0774
+      },
+      {
+        "termino": "se",
+        "peso": 0.0749
+      },
+      {
+        "termino": "general",
+        "peso": 0.0714
+      },
+      {
+        "termino": "huelga",
+        "peso": 0.0714
+      },
+      {
+        "termino": "estamos",
+        "peso": 0.0709
+      }
+    ],
+    "1943-08-22 - CORS Acta reunión 5": [
+      {
+        "termino": "actuación",
+        "peso": 0.1131
+      },
+      {
+        "termino": "factores",
+        "peso": 0.1131
+      },
+      {
+        "termino": "que",
+        "peso": 0.1087
+      },
+      {
+        "termino": "gobierno",
+        "peso": 0.1054
+      },
+      {
+        "termino": "de",
+        "peso": 0.1052
+      },
+      {
+        "termino": "la",
+        "peso": 0.1022
+      },
+      {
+        "termino": "el",
+        "peso": 0.0974
+      },
+      {
+        "termino": "construcciones",
+        "peso": 0.0962
+      },
+      {
+        "termino": "federal",
+        "peso": 0.0962
+      },
+      {
+        "termino": "apoya",
+        "peso": 0.0962
+      },
+      {
+        "termino": "consejo",
+        "peso": 0.0927
+      },
+      {
+        "termino": "fora",
+        "peso": 0.0927
+      },
+      {
+        "termino": "correale",
+        "peso": 0.0927
+      },
+      {
+        "termino": "está",
+        "peso": 0.0927
+      },
+      {
+        "termino": "los",
+        "peso": 0.0899
+      },
+      {
+        "termino": "se",
+        "peso": 0.0861
+      },
+      {
+        "termino": "en",
+        "peso": 0.0861
+      },
+      {
+        "termino": "contra",
+        "peso": 0.0856
+      },
+      {
+        "termino": "huelga",
+        "peso": 0.0856
+      },
+      {
+        "termino": "nadie",
+        "peso": 0.0841
+      },
+      {
+        "termino": "opinión",
+        "peso": 0.0841
+      },
+      {
+        "termino": "resistir",
+        "peso": 0.0841
+      },
+      {
+        "termino": "debemos",
+        "peso": 0.0841
+      },
+      {
+        "termino": "cuenta",
+        "peso": 0.0841
+      },
+      {
+        "termino": "tiempo",
+        "peso": 0.0841
+      },
+      {
+        "termino": "último",
+        "peso": 0.0841
+      },
+      {
+        "termino": "con",
+        "peso": 0.0816
+      },
+      {
+        "termino": "decreto",
+        "peso": 0.0797
+      },
+      {
+        "termino": "ha",
+        "peso": 0.0753
+      },
+      {
+        "termino": "gremios",
+        "peso": 0.0748
+      }
+    ],
+    "1943-08-22 - CORS Acta reunión 6": [
+      {
+        "termino": "sector",
+        "peso": 0.118
+      },
+      {
+        "termino": "recalca",
+        "peso": 0.1126
+      },
+      {
+        "termino": "rechazo",
+        "peso": 0.1126
+      },
+      {
+        "termino": "que",
+        "peso": 0.1113
+      },
+      {
+        "termino": "de",
+        "peso": 0.1047
+      },
+      {
+        "termino": "parte",
+        "peso": 0.1038
+      },
+      {
+        "termino": "importancia",
+        "peso": 0.0957
+      },
+      {
+        "termino": "albañiles",
+        "peso": 0.0957
+      },
+      {
+        "termino": "coincide",
+        "peso": 0.0957
+      },
+      {
+        "termino": "cgt",
+        "peso": 0.0957
+      },
+      {
+        "termino": "clase",
+        "peso": 0.0957
+      },
+      {
+        "termino": "el",
+        "peso": 0.0956
+      },
+      {
+        "termino": "la",
+        "peso": 0.0956
+      },
+      {
+        "termino": "garcía",
+        "peso": 0.0923
+      },
+      {
+        "termino": "debe",
+        "peso": 0.0852
+      },
+      {
+        "termino": "partidario",
+        "peso": 0.0837
+      },
+      {
+        "termino": "decreto",
+        "peso": 0.0829
+      },
+      {
+        "termino": "es",
+        "peso": 0.0829
+      },
+      {
+        "termino": "hay",
+        "peso": 0.0829
+      },
+      {
+        "termino": "capital",
+        "peso": 0.0829
+      },
+      {
+        "termino": "con",
+        "peso": 0.0812
+      },
+      {
+        "termino": "se",
+        "peso": 0.0812
+      },
+      {
+        "termino": "no",
+        "peso": 0.0786
+      },
+      {
+        "termino": "en",
+        "peso": 0.0786
+      },
+      {
+        "termino": "los",
+        "peso": 0.0786
+      },
+      {
+        "termino": "del",
+        "peso": 0.0752
+      },
+      {
+        "termino": "cabrera",
+        "peso": 0.0749
+      },
+      {
+        "termino": "sin",
+        "peso": 0.0749
+      },
+      {
+        "termino": "contra",
+        "peso": 0.0749
+      },
+      {
+        "termino": "fonc",
+        "peso": 0.0744
+      }
+    ],
+    "1943-08-22 - CORS Acta reunión 7": [
+      {
+        "termino": "puntos",
+        "peso": 0.1101
+      },
+      {
+        "termino": "de",
+        "peso": 0.1052
+      },
+      {
+        "termino": "acto",
+        "peso": 0.1045
+      },
+      {
+        "termino": "ramírez",
+        "peso": 0.1045
+      },
+      {
+        "termino": "mucho",
+        "peso": 0.1045
+      },
+      {
+        "termino": "quienes",
+        "peso": 0.1045
+      },
+      {
+        "termino": "ella",
+        "peso": 0.1045
+      },
+      {
+        "termino": "alguien",
+        "peso": 0.1045
+      },
+      {
+        "termino": "coincidir",
+        "peso": 0.1045
+      },
+      {
+        "termino": "luchar",
+        "peso": 0.0974
+      },
+      {
+        "termino": "la",
+        "peso": 0.0933
+      },
+      {
+        "termino": "si",
+        "peso": 0.0925
+      },
+      {
+        "termino": "cuanto",
+        "peso": 0.0888
+      },
+      {
+        "termino": "le",
+        "peso": 0.0888
+      },
+      {
+        "termino": "podemos",
+        "peso": 0.0888
+      },
+      {
+        "termino": "fuera",
+        "peso": 0.0888
+      },
+      {
+        "termino": "previa",
+        "peso": 0.0888
+      },
+      {
+        "termino": "compromiso",
+        "peso": 0.0888
+      },
+      {
+        "termino": "los",
+        "peso": 0.0861
+      },
+      {
+        "termino": "que",
+        "peso": 0.0861
+      },
+      {
+        "termino": "ese",
+        "peso": 0.0856
+      },
+      {
+        "termino": "del",
+        "peso": 0.0799
+      },
+      {
+        "termino": "en",
+        "peso": 0.0795
+      },
+      {
+        "termino": "contra",
+        "peso": 0.079
+      },
+      {
+        "termino": "internacional",
+        "peso": 0.0777
+      },
+      {
+        "termino": "contacto",
+        "peso": 0.0777
+      },
+      {
+        "termino": "opinión",
+        "peso": 0.0777
+      },
+      {
+        "termino": "espíritu",
+        "peso": 0.0777
+      },
+      {
+        "termino": "debate",
+        "peso": 0.0777
+      },
+      {
+        "termino": "hace",
+        "peso": 0.0777
+      }
+    ],
+    "1943-08-22 - CORS Acta reunión 8": [
+      {
+        "termino": "somos",
+        "peso": 0.1094
+      },
+      {
+        "termino": "dicho",
+        "peso": 0.1094
+      },
+      {
+        "termino": "poco",
+        "peso": 0.1038
+      },
+      {
+        "termino": "ponerse",
+        "peso": 0.1038
+      },
+      {
+        "termino": "estatal",
+        "peso": 0.1038
+      },
+      {
+        "termino": "aquí",
+        "peso": 0.1038
+      },
+      {
+        "termino": "tendencias",
+        "peso": 0.1038
+      },
+      {
+        "termino": "de",
+        "peso": 0.1019
+      },
+      {
+        "termino": "dos",
+        "peso": 0.0957
+      },
+      {
+        "termino": "que",
+        "peso": 0.0917
+      },
+      {
+        "termino": "compañero",
+        "peso": 0.0882
+      },
+      {
+        "termino": "otra",
+        "peso": 0.0882
+      },
+      {
+        "termino": "sabemos",
+        "peso": 0.0882
+      },
+      {
+        "termino": "parece",
+        "peso": 0.0882
+      },
+      {
+        "termino": "fuerzas",
+        "peso": 0.0882
+      },
+      {
+        "termino": "han",
+        "peso": 0.0869
+      },
+      {
+        "termino": "la",
+        "peso": 0.0855
+      },
+      {
+        "termino": "el",
+        "peso": 0.0855
+      },
+      {
+        "termino": "en",
+        "peso": 0.079
+      },
+      {
+        "termino": "ha",
+        "peso": 0.0785
+      },
+      {
+        "termino": "sin",
+        "peso": 0.0785
+      },
+      {
+        "termino": "ellos",
+        "peso": 0.0772
+      },
+      {
+        "termino": "formula",
+        "peso": 0.0772
+      },
+      {
+        "termino": "otros",
+        "peso": 0.0772
+      },
+      {
+        "termino": "resuelto",
+        "peso": 0.0772
+      },
+      {
+        "termino": "ahora",
+        "peso": 0.0772
+      },
+      {
+        "termino": "parte",
+        "peso": 0.0772
+      },
+      {
+        "termino": "todo",
+        "peso": 0.0764
+      },
+      {
+        "termino": "los",
+        "peso": 0.0725
+      },
+      {
+        "termino": "no",
+        "peso": 0.0698
+      }
+    ],
+    "1943-08-22 - CORS Acta reunión 9": [
+      {
+        "termino": "injuriosas",
+        "peso": 0.1337
+      },
+      {
+        "termino": "opiniones",
+        "peso": 0.1137
+      },
+      {
+        "termino": "bluff",
+        "peso": 0.1079
+      },
+      {
+        "termino": "ustedes",
+        "peso": 0.1079
+      },
+      {
+        "termino": "compañeros",
+        "peso": 0.1079
+      },
+      {
+        "termino": "palabras",
+        "peso": 0.1079
+      },
+      {
+        "termino": "sindicalismo",
+        "peso": 0.1079
+      },
+      {
+        "termino": "castradores",
+        "peso": 0.1079
+      },
+      {
+        "termino": "que",
+        "peso": 0.1044
+      },
+      {
+        "termino": "de",
+        "peso": 0.1003
+      },
+      {
+        "termino": "afirmar",
+        "peso": 0.0917
+      },
+      {
+        "termino": "triste",
+        "peso": 0.0917
+      },
+      {
+        "termino": "conciliadora",
+        "peso": 0.0917
+      },
+      {
+        "termino": "proletariado",
+        "peso": 0.0917
+      },
+      {
+        "termino": "nuevo",
+        "peso": 0.0917
+      },
+      {
+        "termino": "la",
+        "peso": 0.0916
+      },
+      {
+        "termino": "del",
+        "peso": 0.0899
+      },
+      {
+        "termino": "es",
+        "peso": 0.0825
+      },
+      {
+        "termino": "falta",
+        "peso": 0.0802
+      },
+      {
+        "termino": "presidencia",
+        "peso": 0.0802
+      },
+      {
+        "termino": "en",
+        "peso": 0.08
+      },
+      {
+        "termino": "los",
+        "peso": 0.08
+      },
+      {
+        "termino": "hay",
+        "peso": 0.0794
+      },
+      {
+        "termino": "balbuena",
+        "peso": 0.0794
+      },
+      {
+        "termino": "el",
+        "peso": 0.0778
+      },
+      {
+        "termino": "por",
+        "peso": 0.0725
+      },
+      {
+        "termino": "mar",
+        "peso": 0.072
+      },
+      {
+        "termino": "plata",
+        "peso": 0.072
+      },
+      {
+        "termino": "cabrera",
+        "peso": 0.0718
+      },
+      {
+        "termino": "sus",
+        "peso": 0.0713
+      }
+    ]
+  },
+  "agregado_subcorpus": [
+    {
+      "termino": "de",
+      "peso_acumulado": 1.1018
+    },
+    {
+      "termino": "que",
+      "peso_acumulado": 1.0392
+    },
+    {
+      "termino": "la",
+      "peso_acumulado": 1.0152
+    },
+    {
+      "termino": "los",
+      "peso_acumulado": 0.7381
+    },
+    {
+      "termino": "el",
+      "peso_acumulado": 0.7015
+    },
+    {
+      "termino": "en",
+      "peso_acumulado": 0.5662
+    },
+    {
+      "termino": "del",
+      "peso_acumulado": 0.4837
+    },
+    {
+      "termino": "se",
+      "peso_acumulado": 0.3227
+    },
+    {
+      "termino": "contra",
+      "peso_acumulado": 0.3131
+    },
+    {
+      "termino": "cors",
+      "peso_acumulado": 0.2949
+    },
+    {
+      "termino": "secretario",
+      "peso_acumulado": 0.2576
+    },
+    {
+      "termino": "con",
+      "peso_acumulado": 0.2463
+    },
+    {
+      "termino": "opinión",
+      "peso_acumulado": 0.2448
+    },
+    {
+      "termino": "es",
+      "peso_acumulado": 0.2399
+    },
+    {
+      "termino": "ha",
+      "peso_acumulado": 0.2281
+    },
+    {
+      "termino": "puntos",
+      "peso_acumulado": 0.2265
+    },
+    {
+      "termino": "albañiles",
+      "peso_acumulado": 0.2249
+    },
+    {
+      "termino": "por",
+      "peso_acumulado": 0.2242
+    },
+    {
+      "termino": "correale",
+      "peso_acumulado": 0.212
+    },
+    {
+      "termino": "clase",
+      "peso_acumulado": 0.2087
+    },
+    {
+      "termino": "reuniones",
+      "peso_acumulado": 0.1982
+    },
+    {
+      "termino": "sector",
+      "peso_acumulado": 0.1978
+    },
+    {
+      "termino": "consejo",
+      "peso_acumulado": 0.1932
+    },
+    {
+      "termino": "delegados",
+      "peso_acumulado": 0.185
+    },
+    {
+      "termino": "compañero",
+      "peso_acumulado": 0.1821
+    },
+    {
+      "termino": "otra",
+      "peso_acumulado": 0.1821
+    },
+    {
+      "termino": "parte",
+      "peso_acumulado": 0.181
+    },
+    {
+      "termino": "invitación",
+      "peso_acumulado": 0.1804
+    },
+    {
+      "termino": "decreto",
+      "peso_acumulado": 0.1626
+    },
+    {
+      "termino": "presidencia",
+      "peso_acumulado": 0.1624
+    },
+    {
+      "termino": "hay",
+      "peso_acumulado": 0.1623
+    },
+    {
+      "termino": "debate",
+      "peso_acumulado": 0.1598
+    },
+    {
+      "termino": "han",
+      "peso_acumulado": 0.1597
+    },
+    {
+      "termino": "huelga",
+      "peso_acumulado": 0.157
+    },
+    {
+      "termino": "sin",
+      "peso_acumulado": 0.1535
+    },
+    {
+      "termino": "próxima",
+      "peso_acumulado": 0.1534
+    },
+    {
+      "termino": "las",
+      "peso_acumulado": 0.1522
+    },
+    {
+      "termino": "no",
+      "peso_acumulado": 0.1484
+    },
+    {
+      "termino": "cabrera",
+      "peso_acumulado": 0.1467
+    },
+    {
+      "termino": "injuriosas",
+      "peso_acumulado": 0.1337
+    },
+    {
+      "termino": "vengan",
+      "peso_acumulado": 0.133
+    },
+    {
+      "termino": "unidad",
+      "peso_acumulado": 0.1316
+    },
+    {
+      "termino": "frente",
+      "peso_acumulado": 0.1292
+    },
+    {
+      "termino": "administrativo",
+      "peso_acumulado": 0.1227
+    },
+    {
+      "termino": "acta",
+      "peso_acumulado": 0.1227
+    },
+    {
+      "termino": "recuerda",
+      "peso_acumulado": 0.1227
+    },
+    {
+      "termino": "nombre",
+      "peso_acumulado": 0.1193
+    },
+    {
+      "termino": "firma",
+      "peso_acumulado": 0.1193
+    },
+    {
+      "termino": "posibilidades",
+      "peso_acumulado": 0.1176
+    },
+    {
+      "termino": "opiniones",
+      "peso_acumulado": 0.1137
+    },
+    {
+      "termino": "actuación",
+      "peso_acumulado": 0.1131
+    },
+    {
+      "termino": "factores",
+      "peso_acumulado": 0.1131
+    },
+    {
+      "termino": "mandato",
+      "peso_acumulado": 0.1131
+    },
+    {
+      "termino": "recalca",
+      "peso_acumulado": 0.1126
+    },
+    {
+      "termino": "rechazo",
+      "peso_acumulado": 0.1126
+    },
+    {
+      "termino": "tachado",
+      "peso_acumulado": 0.1116
+    },
+    {
+      "termino": "resitencia",
+      "peso_acumulado": 0.1116
+    },
+    {
+      "termino": "reconocimiento",
+      "peso_acumulado": 0.1116
+    },
+    {
+      "termino": "cien",
+      "peso_acumulado": 0.1116
+    },
+    {
+      "termino": "pasiva",
+      "peso_acumulado": 0.1116
+    },
+    {
+      "termino": "inmediato",
+      "peso_acumulado": 0.1105
+    },
+    {
+      "termino": "expresó",
+      "peso_acumulado": 0.1105
+    },
+    {
+      "termino": "somos",
+      "peso_acumulado": 0.1094
+    },
+    {
+      "termino": "dicho",
+      "peso_acumulado": 0.1094
+    },
+    {
+      "termino": "memorial",
+      "peso_acumulado": 0.109
+    },
+    {
+      "termino": "bluff",
+      "peso_acumulado": 0.1079
+    },
+    {
+      "termino": "ustedes",
+      "peso_acumulado": 0.1079
+    },
+    {
+      "termino": "compañeros",
+      "peso_acumulado": 0.1079
+    },
+    {
+      "termino": "palabras",
+      "peso_acumulado": 0.1079
+    },
+    {
+      "termino": "sindicalismo",
+      "peso_acumulado": 0.1079
+    },
+    {
+      "termino": "castradores",
+      "peso_acumulado": 0.1079
+    },
+    {
+      "termino": "quieran",
+      "peso_acumulado": 0.1073
+    },
+    {
+      "termino": "político",
+      "peso_acumulado": 0.1073
+    },
+    {
+      "termino": "reconocería",
+      "peso_acumulado": 0.1073
+    },
+    {
+      "termino": "tan",
+      "peso_acumulado": 0.1073
+    },
+    {
+      "termino": "sacrificio",
+      "peso_acumulado": 0.1073
+    },
+    {
+      "termino": "unirnos",
+      "peso_acumulado": 0.1073
+    },
+    {
+      "termino": "nuevamente",
+      "peso_acumulado": 0.1073
+    },
+    {
+      "termino": "campaña",
+      "peso_acumulado": 0.1073
+    },
+    {
+      "termino": "pone",
+      "peso_acumulado": 0.1073
+    },
+    {
+      "termino": "comisión",
+      "peso_acumulado": 0.1071
+    },
+    {
+      "termino": "mantengan",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "oo",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "impresiones",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "novoa",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "impugnando",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "suscribir",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "llega",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "lamandato",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "someta",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "podrían",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "lasiguiente",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "absurdo",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "relacionadora",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "determinadas",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "resolucion",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "sometan",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "dicen",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "días",
+      "peso_acumulado": 0.1065
+    },
+    {
+      "termino": "gobierno",
+      "peso_acumulado": 0.1054
+    }
+  ]
+}
