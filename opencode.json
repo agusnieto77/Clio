@@ -1,0 +1,18 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "clio",
+  "skills": {
+    "paths": [".opencode/skill"]
+  },
+  "permission": {
+    "bash": {
+      "python harness/tools/*": "allow",
+      "python harness\\tools\\*": "allow",
+      "python --version": "allow",
+      "pip install *": "ask",
+      "*": "ask"
+    },
+    "read": "allow",
+    "edit": "allow"
+  }
+}
