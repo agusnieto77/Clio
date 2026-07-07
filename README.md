@@ -106,7 +106,10 @@ GitHub ya puede leer la metadata de citación desde `CITATION.cff`.
 
 ### Cita sugerida (texto)
 
-`Nieto, Agustín (INHUS-CONICET/UNMDP). Clio: Harness agéntico y determinista para OCR histórico, métricas de minería de texto y reportes exploratorios por subcarpeta. Version 0.1.0. GitHub. https://github.com/agusnieto77/Clio`
+> **Nieto, Agustín** (INHUS-CONICET/UNMDP).  
+> *Clio: Harness agéntico y determinista para OCR histórico, métricas de minería de texto y reportes exploratorios por subcarpeta.*  
+> Version 0.1.0. GitHub.  
+> <https://github.com/agusnieto77/Clio>
 
 ### BibTeX
 
