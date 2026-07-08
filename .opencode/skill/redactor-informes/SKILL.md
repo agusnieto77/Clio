@@ -1,6 +1,6 @@
 ---
 name: redactor-informes
-description: Skill protocolaria del subagente redactor de informes del harness Clio. Detalla el protocolo para producir el Entregable A (informe_preliminar.html con tres columnas por imagen) y el Entregable B (informe_final.md con rasgos del subcorpus en español rioplatense neutro). Trabaja exclusivamente con datos ya producidos. Trigger: cuando Clio delega la etapa redaccion de una subcarpeta.
+description: "Skill protocolaria del subagente redactor de informes del harness Clio. Detalla el protocolo para producir el Entregable A (informe_preliminar.html con tres columnas por imagen) y el Entregable B (informe_final.md con rasgos del subcorpus en español rioplatense neutro). Trabaja exclusivamente con datos ya producidos. Trigger: cuando Clio delega la etapa redaccion de una subcarpeta."
 ---
 
 # Skill: Redactor de informes

@@ -1,6 +1,6 @@
 ---
 name: clio
-description: Skill protocolaria de Clio, la orquestadora del harness Clio. Detalla el protocolo de pasos exactos para procesar una subcarpeta de Fuentes/ delegando en orden a OCR, analista cuantitativo y redactor, con validaciones entre etapas y reanudacion desde el filesystem. Trigger: cuando Clio recibe una subcarpeta para procesar.
+description: "Skill protocolaria de Clio, la orquestadora del harness Clio. Detalla el protocolo de pasos exactos para procesar una subcarpeta de Fuentes/ delegando en orden a OCR, analista cuantitativo y redactor, con validaciones entre etapas y reanudacion desde el filesystem. Trigger: cuando Clio recibe una subcarpeta para procesar."
 ---
 
 # Skill: Clio (orquestadora)

@@ -1,6 +1,6 @@
 ---
 name: analista-cuantitativo
-description: Skill protocolaria del subagente analista cuantitativo del harness Clio. Detalla el protocolo para calcular las cuatro tecnicas (frecuencia con y sin stopwords, co-ocurrencia con ventana 5, correlacion, TF-IDF) sobre las transcripciones de una subcarpeta, dejando resultados en metricas/ y declarando versiones y parametros. Trigger: cuando Clio delega la etapa analisis de una subcarpeta.
+description: "Skill protocolaria del subagente analista cuantitativo del harness Clio. Detalla el protocolo para calcular las cuatro tecnicas (frecuencia con y sin stopwords, co-ocurrencia con ventana 5, correlacion, TF-IDF) sobre las transcripciones de una subcarpeta, dejando resultados en metricas/ y declarando versiones y parametros. Trigger: cuando Clio delega la etapa analisis de una subcarpeta."
 ---
 
 # Skill: Analista cuantitativo

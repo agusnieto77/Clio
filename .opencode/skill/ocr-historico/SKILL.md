@@ -1,6 +1,6 @@
 ---
 name: ocr-historico
-description: Skill protocolaria del subagente OCR historico del harness Clio. Detalla el protocolo de pasos exactos para transcribir UNA imagen a la vez de una subcarpeta, mantener checklist.json, mover imagenes procesadas a i_procesadas/ tras verificar el guardado, y manejar errores sin mover imagenes fallidas. Trigger: cuando Clio delega la etapa OCR de una subcarpeta.
+description: "Skill protocolaria del subagente OCR historico del harness Clio. Detalla el protocolo de pasos exactos para transcribir UNA imagen a la vez de una subcarpeta, mantener checklist.json, mover imagenes procesadas a i_procesadas/ tras verificar el guardado, y manejar errores sin mover imagenes fallidas. Trigger: cuando Clio delega la etapa OCR de una subcarpeta."
 ---
 
 # Skill: OCR historico

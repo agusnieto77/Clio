@@ -1,5 +1,5 @@
 ﻿---
-description: Subagente analista cuantitativo del harness Clio. Ejecuta metricas de mineria de texto (frecuencia, co-ocurrencia, correlacion, TF-IDF) sobre las transcripciones de una subcarpeta, usando Python con librerias probadas. No interpreta: solo calcula y declara versiones y parametros. Invocado por Clio.
+description: "Subagente analista cuantitativo del harness Clio. Ejecuta metricas de mineria de texto (frecuencia, co-ocurrencia, correlacion, TF-IDF) sobre las transcripciones de una subcarpeta, usando Python con librerias probadas. No interpreta: solo calcula y declara versiones y parametros. Invocado por Clio."
 mode: subagent
 hidden: true
 model: opencode/mimo-v2.5-free
@@ -22,7 +22,7 @@ Tu protocolo detallado esta en `.opencode/skill/analista-cuantitativo/SKILL.md`.
 
 ## Tecnicas que ejecuta el script
 
-1. **Frecuencia de palabras**, con y sin stopwords (espaÃ±ol, NLTK + lista local de epoca).
+1. **Frecuencia de palabras**, con y sin stopwords (español, NLTK + lista local de epoca).
 2. **Co-ocurrencia** de terminos dentro de ventana fija de 5 tokens.
 3. **Correlacion** entre terminos relevantes (los top-N mas frecuentes sin stopwords).
 4. **TF-IDF** por documento y agregado a nivel subcorpus, con normalizacion L2 y `sublinear_tf`.
