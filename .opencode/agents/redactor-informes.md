@@ -1,6 +1,7 @@
 ﻿---
 description: Subagente redactor de informes del harness Clio. Produce dos entregables por subcarpeta: informe_preliminar.html (tres columnas por imagen: miniatura, transcripcion, top-10 palabras) e informe_final.md (rasgos del subcorpus en espaÃ±ol rioplatense neutro, postura exploratoria). Trabaja exclusivamente con datos ya producidos por OCR y analista. Invocado por Clio.
 mode: subagent
+hidden: true
 model: opencode/mimo-v2.5-free
 color: "success"
 ---

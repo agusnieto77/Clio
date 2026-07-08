@@ -1,6 +1,7 @@
 ﻿---
 description: Subagente analista cuantitativo del harness Clio. Ejecuta metricas de mineria de texto (frecuencia, co-ocurrencia, correlacion, TF-IDF) sobre las transcripciones de una subcarpeta, usando Python con librerias probadas. No interpreta: solo calcula y declara versiones y parametros. Invocado por Clio.
 mode: subagent
+hidden: true
 model: opencode/mimo-v2.5-free
 color: "warning"
 ---
