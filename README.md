@@ -124,7 +124,6 @@ Clio/
 - `docs/instalacion.md`
 - `docs/uso.md`
 - `docs/formato-del-corpus.md`
-- `docs/share-clio.md`
 - `CONTRIBUTING.md`
 
 ## Cómo citar Clio
