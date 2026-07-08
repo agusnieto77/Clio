@@ -2,7 +2,7 @@
   "_doc": "Preset recommended de Clio. Es la configuracion testeada en este repo y la opcion sugerida para obtener la mejor experiencia inicial.",
   "version": 1,
   "preset": "recommended",
-  "nota_runtime": "Los IDs declarados en este archivo son la fuente de verdad del harness Clio para modelos principal y respaldo. El frontmatter de .opencode/agent/<rol>.md debe reflejar el principal, salvo cuando swap_modelo.py lo haya cambiado temporalmente al respaldo. Si el investigador migra el harness a otro runtime, debe reemplazar cada id_opencode por el ID equivalente con su prefijo de proveedor.",
+  "nota_runtime": "Los IDs declarados en este archivo son la fuente de verdad del harness Clio para modelos principal y respaldo. El frontmatter de .opencode/agents/<rol>.md debe reflejar el principal, salvo cuando swap_modelo.py lo haya cambiado temporalmente al respaldo. Si el investigador migra el harness a otro runtime, debe reemplazar cada id_opencode por el ID equivalente con su prefijo de proveedor.",
   "agentes": {
     "clio": {
       "rol": "Orquestadora. No ejecuta tareas tecnicas. Coordina y registra.",

@@ -8,7 +8,7 @@ Uso:
     python harness/tools/configurar_modelos.py --show-presets
 
 El script escribe `harness/modelos.json` y sincroniza el campo `model:` de los
-archivos `.opencode/agent/*.md` con el modelo principal de cada rol.
+archivos `.opencode/agents/*.md` con el modelo principal de cada rol.
 """
 from __future__ import annotations
 
@@ -43,7 +43,7 @@ def _modelos_path(repo_root: Path) -> Path:
 
 
 def _agent_path(repo_root: Path, rol: str) -> Path:
-    return repo_root / ".opencode" / "agent" / f"{rol}.md"
+    return repo_root / ".opencode" / "agents" / f"{rol}.md"
 
 
 def _leer_json(path: Path) -> dict:

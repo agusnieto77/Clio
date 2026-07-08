@@ -1,5 +1,5 @@
 ---
-description: Invoca a Clio para procesar una subcarpeta de Fuentes/. Clio coordina las etapas OCR, analisis cuantitativo y redaccion, manteniendo log persistente y reanudable. Uso: /clio <subcarpeta>.
+description: "Invoca a Clio para procesar una subcarpeta de Fuentes/. Clio coordina las etapas OCR, analisis cuantitativo y redaccion, manteniendo log persistente y reanudable. Uso: /clio <subcarpeta>."
 agent: clio
 ---
 

@@ -54,6 +54,9 @@ Solo para debug o cuando no podés abrir OpenCode. Sin OpenCode perdés la orque
 python harness/tools/estado.py Fuentes/MiSubcorpus init
 python harness/tools/checklist.py Fuentes/MiSubcorpus mostrar
 python harness/tools/validar.py transcripciones Fuentes/MiSubcorpus
+python harness/tools/metricas.py Fuentes/MiSubcorpus
 python harness/tools/validar.py metricas Fuentes/MiSubcorpus
+python harness/tools/informe_preliminar.py Fuentes/MiSubcorpus
 python harness/tools/validar.py informes Fuentes/MiSubcorpus
+python harness/tools/estado.py Fuentes/MiSubcorpus resumen
 ```

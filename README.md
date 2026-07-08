@@ -3,7 +3,7 @@
 ![Release](https://img.shields.io/github/v/release/agusnieto77/Clio?label=release)
 ![License](https://img.shields.io/github/license/agusnieto77/Clio)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![Regression tests](https://img.shields.io/badge/regression-15%20tests-green)
+![Regression tests](https://img.shields.io/badge/regression-19%20tests-green)
 
 Harness agéntico nativo de [OpenCode](https://opencode.ai) y determinista para procesar corpus documentales fotografiados: OCR histórico, métricas de minería de texto y reportes exploratorios por subcarpeta.
 
@@ -22,7 +22,7 @@ El principio rector es **determinismo**: estado en el filesystem, validaciones e
 
 ## Estado del repo público
 
-Este repo incluye **un solo subcorpus de ejemplo** ya procesado:
+Este repo incluye **un subcorpus procesado de referencia** y una carpeta de fuentes sin procesar:
 
 - `Fuentes/Actas/` — 10 fojas de una reunión del CORS (22/08/1943), con:
   - `i_procesadas/`
@@ -31,8 +31,9 @@ Este repo incluye **un solo subcorpus de ejemplo** ya procesado:
   - `informe_preliminar.html`
   - `informe_final.md`
   - `log_clio.md`
+- `Fuentes/Panfletos/` — imágenes sueltas pendientes, útil para probar una corrida nueva.
 
-Sirve como corpus de referencia para ver la estructura completa de entrada/salida.
+`Fuentes/Actas/` sirve como corpus de referencia para ver la estructura completa de entrada/salida.
 
 ## Requisitos
 
@@ -65,7 +66,7 @@ python harness/tools/configurar_modelos.py --preset default
 python harness/tools/configurar_modelos.py --preset recommended
 ```
 
-Clio ya trae un `harness/modelos.json` listo para usar. El asistente reescribe ese archivo y además sincroniza el campo `model:` de `.opencode/agent/*.md`. Después del cambio, **reiniciá OpenCode**.
+Clio ya trae un `harness/modelos.json` listo para usar. El asistente reescribe ese archivo y además sincroniza el campo `model:` de `.opencode/agents/*.md`. Después del cambio, **reiniciá OpenCode**.
 
 > Aclaración: `harness/modelos.json` está **trackeado en el repo** intencionalmente, de modo que el repositorio publicado refleje siempre una configuración funcional. Los presets `modelos.default.json` y `modelos.recommended.json` son plantillas que el asistente guiado puede copiar a `modelos.json`; **no se cargan en runtime**. Los agentes en runtime leen su propio frontmatter `model:`.
 
@@ -79,7 +80,7 @@ Desde una sesión OpenCode abierta en este repo:
 /clio Fuentes/MiSubcorpus
 ```
 
-OpenCode carga el agente `clio` definido en `opencode.json`, las cuatro skills de `.opencode/skill/` y el comando `/clio`. El flujo valida el estado en cada etapa y registra avance en el filesystem, así que es seguro interrumpirlo y reanudar.
+OpenCode usa `opencode.json` para elegir `clio` como agente por defecto, carga su definición desde `.opencode/agents/clio.md`, las cuatro skills de `.opencode/skill/` y el comando `/clio`. El flujo valida el estado en cada etapa y registra avance en el filesystem, así que es seguro interrumpirlo y reanudar.
 
 ### Fallback — pipeline manual con scripts sueltos
 
@@ -101,20 +102,23 @@ python harness/tools/estado.py Fuentes/MiSubcorpus resumen
 Clio/
 ├── opencode.json
 ├── .opencode/
-│   ├── agent/
+│   ├── agents/
 │   ├── command/
 │   └── skill/
 ├── harness/
 │   ├── modelos.json
 │   └── tools/
 ├── tests/
-│   └── clio_validation_regression.py
+│   ├── run_all.py
+│   ├── clio_validation_regression.py
+│   └── clio_model_setup_regression.py
 ├── docs/
 │   ├── instalacion.md
 │   ├── uso.md
 │   └── formato-del-corpus.md
 └── Fuentes/
-    └── Actas/
+    ├── Actas/
+    └── Panfletos/
 ```
 
 ## Garantías actuales
@@ -122,7 +126,7 @@ Clio/
 - Validación de transcripciones, métricas e informes.
 - Reanudación desde filesystem (`checklist.json`, `i_procesadas/`, `metricas/`, informes).
 - `correlacion.json` determinista entre procesos Python con distinto `PYTHONHASHSEED`.
-- Suite de regresión incluida en `tests/clio_validation_regression.py`.
+- Suite de regresión completa en `tests/run_all.py` (19 tests entre validación y configuración de modelos).
 
 ## Documentación
 

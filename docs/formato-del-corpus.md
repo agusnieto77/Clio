@@ -25,6 +25,9 @@ Cada subcarpeta dentro de `Fuentes/` representa un subcorpus independiente.
 - `ARCHIVOS_METRICAS_ESPERADOS` vive en `harness/tools/common.py` y es la fuente única.
 - `leer_transcripcion()` vive en `harness/tools/common.py` y es el helper único.
 
-## Ejemplo incluido
+## Ejemplos incluidos
 
-Este repo trae `Fuentes/Actas/` ya procesado como referencia para investigadores que quieran entender la estructura completa del workflow.
+Este repo trae:
+
+- `Fuentes/Actas/` ya procesado como referencia para investigadores que quieran entender la estructura completa del workflow.
+- `Fuentes/Panfletos/` con imágenes sueltas pendientes para probar una corrida nueva.

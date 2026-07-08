@@ -19,7 +19,7 @@ def _reset_repo(name: str) -> Path:
     if repo.exists():
         shutil.rmtree(repo)
     (repo / "harness").mkdir(parents=True)
-    (repo / ".opencode" / "agent").mkdir(parents=True)
+    (repo / ".opencode" / "agents").mkdir(parents=True)
     return repo
 
 
@@ -40,7 +40,7 @@ def _write_agent(repo: Path, rol: str, model: str = "dummy/old-model") -> None:
         'color: "primary"\n'
         "---\n"
     )
-    (repo / ".opencode" / "agent" / f"{rol}.md").write_text(
+    (repo / ".opencode" / "agents" / f"{rol}.md").write_text(
         contenido,
         encoding="utf-8",
     )
@@ -71,7 +71,7 @@ def test_aplicar_preset_escribe_modelos_y_sincroniza_agents() -> None:
     assert saved["preset"] == "default"
     for rol in cm.ROLES:
         principal = config["agentes"][rol]["principal"]["id_opencode"]
-        agent_text = (repo / ".opencode" / "agent" / f"{rol}.md").read_text(
+        agent_text = (repo / ".opencode" / "agents" / f"{rol}.md").read_text(
             encoding="utf-8"
         )
         assert f"model: {principal}" in agent_text
@@ -89,7 +89,7 @@ def test_sincronizar_agents_tolera_modelo_ya_actualizado() -> None:
 
     for rol in cm.ROLES:
         principal = config["agentes"][rol]["principal"]["id_opencode"]
-        agent_text = (repo / ".opencode" / "agent" / f"{rol}.md").read_text(
+        agent_text = (repo / ".opencode" / "agents" / f"{rol}.md").read_text(
             encoding="utf-8"
         )
         assert f"model: {principal}" in agent_text

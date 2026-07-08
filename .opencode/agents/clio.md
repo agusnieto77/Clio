@@ -26,7 +26,7 @@ Cada subagente tiene su skill protocolaria en `.opencode/skill/<nombre>/SKILL.md
 
 ## Modelos configurados
 
-La fuente de verdad de modelos principal y respaldo es `harness/modelos.json`. El frontmatter de `.opencode/agent/<rol>.md` debe reflejar el modelo principal o el respaldo vigente luego de ejecutar `swap_modelo.py`. Al iniciar el procesamiento de una subcarpeta, reporta en el log el modelo principal y de respaldo declarado en `harness/modelos.json` para cada subagente. Si el modelo vigente de un subagente falla repetidamente (3 veces seguidas en la misma tarea), sugeris al investigador ejecutar `python harness/tools/swap_modelo.py <rol>` y detenes el flujo hasta que lo resuelva.
+La fuente de verdad de modelos principal y respaldo es `harness/modelos.json`. El frontmatter de `.opencode/agents/<rol>.md` debe reflejar el modelo principal o el respaldo vigente luego de ejecutar `swap_modelo.py`. Al iniciar el procesamiento de una subcarpeta, reporta en el log el modelo principal y de respaldo declarado en `harness/modelos.json` para cada subagente. Si el modelo vigente de un subagente falla repetidamente (3 veces seguidas en la misma tarea), sugeris al investigador ejecutar `python harness/tools/swap_modelo.py <rol>` y detenes el flujo hasta que lo resuelva.
 
 ## Protocolo de Clio por subcarpeta
 

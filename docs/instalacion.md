@@ -35,7 +35,7 @@ python harness/tools/configurar_modelos.py --preset default
 python harness/tools/configurar_modelos.py --preset recommended
 ```
 
-El repo ya trae un `harness/modelos.json` funcional. El asistente reescribe ese archivo y sincroniza los `model:` de `.opencode/agent/*.md`. Reiniciá OpenCode después de cambiar modelos.
+El repo ya trae un `harness/modelos.json` funcional. El asistente reescribe ese archivo y sincroniza los `model:` de `.opencode/agents/*.md`. Reiniciá OpenCode después de cambiar modelos.
 
 ## Stopwords NLTK
 

@@ -2,7 +2,7 @@
   "_doc": "Preset default de Clio. Pensado como punto de partida simple para usuarios no técnicos. El setup guiado puede copiar este archivo a modelos.json y sincronizar los agentes.",
   "version": 1,
   "preset": "default",
-  "nota_runtime": "Esta configuracion privilegia menor friccion para roles de texto y deja el OCR con un modelo principal de vision robusto. El frontmatter de .opencode/agent/<rol>.md debe reflejar siempre el principal vigente.",
+  "nota_runtime": "Esta configuracion privilegia menor friccion para roles de texto y deja el OCR con un modelo principal de vision robusto. El frontmatter de .opencode/agents/<rol>.md debe reflejar siempre el principal vigente.",
   "agentes": {
     "clio": {
       "rol": "Orquestadora. No ejecuta tareas tecnicas. Coordina y registra.",

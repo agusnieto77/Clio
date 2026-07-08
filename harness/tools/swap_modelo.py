@@ -7,7 +7,7 @@ Uso:
 
 Roles validos: clio, ocr-historico, analista-cuantitativo, redactor-informes.
 
-Lee harness/modelos.json, identifica el model: del .opencode/agent/<rol>.md y
+Lee harness/modelos.json, identifica el model: del .opencode/agents/<rol>.md y
 lo reescribe con el otro modelo (principal <-> respaldo). El cambio exige
 reiniciar OpenCode para que el runtime recargue la configuracion.
 """
@@ -35,7 +35,7 @@ def _leer_modelos() -> dict:
 
 
 def _agent_path(rol: str) -> Path:
-    return REPO_RAIZ / ".opencode" / "agent" / f"{rol}.md"
+    return REPO_RAIZ / ".opencode" / "agents" / f"{rol}.md"
 
 
 def _modelo_actual(path: Path) -> str | None:

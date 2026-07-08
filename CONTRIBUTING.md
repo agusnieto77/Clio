@@ -38,7 +38,7 @@ This repository is designed for **research use with reproducible outputs**. That
 | Area | Purpose |
 |------|---------|
 | `harness/tools/` | Deterministic Python CLI tools |
-| `.opencode/agent/` | Agent definitions |
+| `.opencode/agents/` | Agent definitions |
 | `.opencode/skill/` | Protocol skills with exact steps |
 | `tests/` | Regression suite |
 | `Fuentes/` | Example corpus structure |
@@ -59,7 +59,7 @@ If your change touches the pipeline logic, also inspect the relevant scripts in 
 At minimum, contributors should run:
 
 ```bash
-python tests/clio_validation_regression.py
+python tests/run_all.py
 ```
 
 If your change touches a specific pipeline stage, also run the corresponding validation command(s), for example:
