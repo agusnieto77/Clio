@@ -66,6 +66,8 @@ python harness/tools/configurar_modelos.py --preset recommended
 
 Clio ya trae un `harness/modelos.json` listo para usar. El asistente reescribe ese archivo y además sincroniza el campo `model:` de `.opencode/agent/*.md`. Después del cambio, **reiniciá OpenCode**.
 
+> Aclaración: `harness/modelos.json` está **trackeado en el repo** intencionalmente, de modo que el repositorio publicado refleje siempre una configuración funcional. Los presets `modelos.default.json` y `modelos.recommended.json` son plantillas que el asistente guiado puede copiar a `modelos.json`; **no se cargan en runtime**. Los agentes en runtime leen su propio frontmatter `model:`.
+
 ## Uso rápido
 
 ### Opción A — flujo completo con agentes
