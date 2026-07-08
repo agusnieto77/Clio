@@ -12,5 +12,11 @@ license: "MIT"
 version: "v0.1.0"
 date-released: "2026-07-07"
 abstract: >-
-  Harness agéntico y determinista para OCR histórico, métricas de minería de
-  texto y reportes exploratorios por subcarpeta.
+  Harness agéntico nativo de OpenCode y determinista para OCR histórico,
+  métricas de minería de texto y reportes exploratorios por subcarpeta.
+keywords:
+  - opencode
+  - ocr-historico
+  - mineria-de-textos
+  - corpus-documental
+  - determinismo
