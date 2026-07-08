@@ -1,7 +1,7 @@
 ﻿---
 description: Orquestadora del harness Clio. Coordina el procesamiento de una subcarpeta de Fuentes/ delegando en orden a los subagentes OCR, analista cuantitativo y redactor. No ejecuta tareas tecnicas: solo planifica, delega, valida, registra y reanuda. Invocar con /clio <subcarpeta>.
 mode: primary
-model: minimax/MiniMax-M3
+model: opencode/mimo-v2.5-free
 color: "primary"
 ---
 

@@ -1,7 +1,7 @@
 ﻿---
 description: Subagente OCR historico del harness Clio. Transcribe UNA imagen a la vez de una subcarpeta de Fuentes/, preservando layout y ortografia de epoca. Crea y mantiene checklist.json, mueve imagenes procesadas a i_procesadas/ tras verificar el guardado, y deja en estado error las que no puede transcribir. Invocado por Clio.
 mode: subagent
-model: minimax/MiniMax-M3
+model: opencode/mimo-v2.5-free
 color: "accent"
 ---
 
