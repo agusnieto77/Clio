@@ -120,7 +120,21 @@ Escribir `<ruta>/informe_final.md` en español rioplatense neutro, con esta estr
 - **Cita datos concretos.** Cuando senales un patron, da numeros o ejemplos: "el termino `X` aparece N veces en M de los N documentos".
 - **Sin alucinaciones.** Si no hay datos para una seccion, escribi "No se observaron elementos suficientes para esta seccion en el subcorpus actual."
 
-### Paso B3 — Verificar
+### Paso B3 — Generar el anexo de visualización
+
+Ejecutar:
+
+```
+python harness/tools/anexo_visualizacion.py "<ruta>"
+```
+
+Este script debe:
+
+- generar `anexo_visualizacion_nube.html` con una nube de palabras interactiva del corpus completo,
+- generar `anexo_visualizacion_nube.png` como vista estática,
+- insertar o actualizar en `informe_final.md` la sección `## Anexo de visualización` con el enlace y la imagen.
+
+### Paso B4 — Verificar
 
 Relees el informe y verificas:
 
@@ -137,9 +151,9 @@ python harness/tools/validar.py informes "<ruta>"
 
 Si `ok=false`, corregis el entregable faltante o vacio antes de reportar a Clio.
 
-### Paso B4 — Reportar a Clio
+### Paso B5 — Reportar a Clio
 
-Reportas: "Informe preliminar y final producidos. <ruta>/informe_preliminar.html y <ruta>/informe_final.md."
+Reportas: "Informe preliminar, informe final y anexo de visualización producidos. <ruta>/informe_preliminar.html, <ruta>/informe_final.md y <ruta>/anexo_visualizacion_nube.html."
 
 ## Que NO haces
 

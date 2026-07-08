@@ -16,6 +16,8 @@ import sys
 from pathlib import Path
 
 from common import (
+    ARCHIVO_ANEXO_NUBE_HTML,
+    ARCHIVO_ANEXO_NUBE_PNG,
     ARCHIVO_INFORME_HTML,
     ARCHIVO_INFORME_MD,
     ARCHIVOS_METRICAS_ESPERADOS,
@@ -188,6 +190,8 @@ def validar_metricas(ruta: Path) -> int:
 def validar_informes(ruta: Path) -> int:
     html = ruta / ARCHIVO_INFORME_HTML
     md = ruta / ARCHIVO_INFORME_MD
+    anexo_html = ruta / ARCHIVO_ANEXO_NUBE_HTML
+    anexo_png = ruta / ARCHIVO_ANEXO_NUBE_PNG
     estado = {}
     ok = True
     imagenes_procesadas = listar_imagenes_procesadas(ruta)
@@ -213,14 +217,31 @@ def validar_informes(ruta: Path) -> int:
             "## 2. Patrones lexicos",
             "## 3. Asociaciones",
             "## 5. Hallazgos",
-            "## Anexo",
+            "## Anexo de visualización",
         ]
         faltan = [titulo for titulo in requeridas if titulo not in contenido_md]
-        if len(contenido_md.strip()) < 500 or faltan:
-            estado["informe_final.md"] = {"estado": "estructura_incompleta", "faltan": faltan}
+        referencias_anexo = [ARCHIVO_ANEXO_NUBE_HTML, ARCHIVO_ANEXO_NUBE_PNG]
+        faltan_refs = [ref for ref in referencias_anexo if ref not in contenido_md]
+        if len(contenido_md.strip()) < 500 or faltan or faltan_refs:
+            estado["informe_final.md"] = {"estado": "estructura_incompleta", "faltan": faltan, "faltan_referencias": faltan_refs}
             ok = False
         else:
             estado["informe_final.md"] = "ok"
+    if not anexo_html.is_file() or anexo_html.stat().st_size == 0:
+        estado[ARCHIVO_ANEXO_NUBE_HTML] = "falta_o_vacio"
+        ok = False
+    else:
+        contenido_anexo_html = anexo_html.read_text(encoding="utf-8", errors="ignore")
+        if "Plotly.newPlot" not in contenido_anexo_html and "plotly" not in contenido_anexo_html.lower():
+            estado[ARCHIVO_ANEXO_NUBE_HTML] = "estructura_incompleta"
+            ok = False
+        else:
+            estado[ARCHIVO_ANEXO_NUBE_HTML] = "ok"
+    if not anexo_png.is_file() or anexo_png.stat().st_size == 0:
+        estado[ARCHIVO_ANEXO_NUBE_PNG] = "falta_o_vacio"
+        ok = False
+    else:
+        estado[ARCHIVO_ANEXO_NUBE_PNG] = "ok"
     emitir_json({"ok": ok, **estado})
     return 0 if ok else 1
 

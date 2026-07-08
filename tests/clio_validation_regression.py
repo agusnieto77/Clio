@@ -234,6 +234,66 @@ def test_informes_fail_when_reports_are_skeletal() -> None:
     assert payload["ok"] is False
 
 
+def test_anexo_visualizacion_generates_assets_and_updates_report() -> None:
+    # Given: one processed document with valid metrics and a draft final report.
+    ruta = _reset_case("anexo_visualizacion")
+    (ruta / "i_procesadas").mkdir()
+    (ruta / "i_procesadas" / "doc.jpg").write_bytes(b"fake")
+    (ruta / "doc.txt").write_text(
+        "puerto pesca trabajo sindicato convenio salario marineros pesca puerto pesca",
+        encoding="utf-8",
+    )
+    metric_code, metric_payload = _run_tool("harness/tools/metricas.py", str(ruta))
+    assert metric_code == 0
+    assert metric_payload["ok"] is True
+    html_code, html_payload = _run_tool("harness/tools/informe_preliminar.py", str(ruta))
+    assert html_code == 0
+    assert html_payload["ok"] is True
+    (ruta / "informe_final.md").write_text(
+        "# Informe final del subcorpus `anexo_visualizacion`\n\n"
+        "## Nota de metodo\n"
+        "Se trabajó con transcripciones preservando la ortografía de época y con métricas de frecuencia, asociación y frecuencia relativa ponderada. La nota metodológica se apoya en los parámetros declarados en `metricas/versiones.json`.\n\n"
+        "## 1. Descripcion general del subcorpus\n"
+        "Se observa un subcorpus breve de un documento, con vocabulario laboral y portuario claramente reiterado.\n\n"
+        "## 2. Patrones lexicos y tematicos\n"
+        "Los términos puerto, pesca y trabajo aparecen reiteradamente y organizan el campo léxico dominante.\n\n"
+        "## 3. Asociaciones entre terminos\n"
+        "Las asociaciones más visibles se concentran en el vínculo entre pesca, puerto y trabajo.\n\n"
+        "## 4. Rarezas ortograficas y lexicas\n"
+        "No se observaron rarezas suficientes en este caso breve, más allá de la concentración terminológica.\n\n"
+        "## 5. Hallazgos\n"
+        "### 5.1 Terminos inesperados\n"
+        "No se observaron elementos suficientes para esta sección en el subcorpus actual.\n\n"
+        "### 5.2 Saltos temporales\n"
+        "No se observaron elementos suficientes para esta sección en el subcorpus actual.\n\n"
+        "### 5.3 Voces ausentes\n"
+        "No se observaron elementos suficientes para esta sección en el subcorpus actual.\n\n"
+        "### 5.4 Otros\n"
+        "El corpus permite una descripción preliminar pero no todavía una diferenciación temática fina.\n\n"
+        "## 6. Caracteristicas generales del subcorpus\n"
+        "Predomina un vocabulario laboral concentrado, con foco en actividades del puerto y la pesca.\n\n"
+        "## Anexo: sobre la transcripcion\n"
+        "La transcripción preserva la ortografía de época y el detalle por imagen está en `informe_preliminar.html`.\n",
+        encoding="utf-8",
+    )
+
+    # When: the visualization annex is generated.
+    code, payload = _run_tool("harness/tools/anexo_visualizacion.py", str(ruta))
+    contenido_md = (ruta / "informe_final.md").read_text(encoding="utf-8")
+    valid_code, valid_payload = _run_tool("harness/tools/validar.py", "informes", str(ruta))
+
+    # Then: the annex assets exist, the markdown links them, and report validation passes.
+    assert code == 0
+    assert payload["ok"] is True
+    assert (ruta / "anexo_visualizacion_nube.html").is_file()
+    assert (ruta / "anexo_visualizacion_nube.png").is_file()
+    assert "## Anexo de visualización" in contenido_md
+    assert "anexo_visualizacion_nube.html" in contenido_md
+    assert "anexo_visualizacion_nube.png" in contenido_md
+    assert valid_code == 0
+    assert valid_payload["ok"] is True
+
+
 def test_estado_does_not_retry_errored_images_as_plain_pending() -> None:
     # Given: an image remains in the source folder but checklist marks it as OCR error.
     ruta = _reset_case("errored_source_image")

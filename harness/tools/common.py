@@ -26,6 +26,8 @@ ARCHIVO_CHECKLIST = "checklist.json"
 ARCHIVO_LOG_CLIO = "log_clio.md"
 ARCHIVO_INFORME_HTML = "informe_preliminar.html"
 ARCHIVO_INFORME_MD = "informe_final.md"
+ARCHIVO_ANEXO_NUBE_HTML = "anexo_visualizacion_nube.html"
+ARCHIVO_ANEXO_NUBE_PNG = "anexo_visualizacion_nube.png"
 
 EXTENSIONES_IMAGEN = (".jpg", ".jpeg")
 EXTENSIONES_TRANSCRIPCION = (".txt", ".json")

@@ -23,7 +23,7 @@ Tu protocolo detallado esta en `.opencode/skill/redactor-informes/SKILL.md`. Ant
 ## Entregables
 
 - **Entregable A:** `informe_preliminar.html` — navegable, con indice, una seccion por imagen con tres columnas: (1) miniatura de la imagen original, (2) texto extraido por OCR, (3) las 10 palabras mas frecuentes sin stopwords de ese documento. El HTML lo produce el script `harness/tools/informe_preliminar.py`. Vos lo invocas y lo verificas.
-- **Entregable B:** `informe_final.md` — lo redactas vos con tu capacidad de lenguaje, a partir de las metricas. Secciones obligatorias: patrones lexicos y tematicos, rarezas ortograficas o lexicas, hallazgos (terminos inesperados, saltos temporales, voces ausentes), caracteristicas generales del subcorpus.
+- **Entregable B:** `informe_final.md` — lo redactas vos con tu capacidad de lenguaje, a partir de las metricas. Debe incluir un `Anexo de visualización` con una nube de palabras del corpus completo. El anexo se genera con `harness/tools/anexo_visualizacion.py`, que deja una vista interactiva HTML y una vista estática PNG enlazadas desde el informe.
 
 ## Que NO haces
 
