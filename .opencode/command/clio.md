@@ -13,7 +13,8 @@ Pasos a ejecutar (Clio):
 3. Reportar los modelos principal y de respaldo de cada subagente leyendo `harness/modelos.json`.
 4. Decidir punto de reanudacion segun el estado del filesystem.
 5. Delegar en orden a `ocr-historico`, `analista-cuantitativo`, `redactor-informes`, validando entre etapas con `python harness/tools/validar.py`.
-6. Detener el flujo y registrar si una validacion falla.
-7. Cerrar el log con el resumen final.
+6. Si una falla apunta al modelo, registrar el incidente con `python harness/tools/swap_modelo.py <rol> --auto "$ARGUMENTS" "<detalle>"` y actuar segun el JSON de salida.
+7. Detener el flujo y registrar si una validacion falla o si el swap automatico exige reinicio.
+8. Cerrar el log con el resumen final.
 
 No ejecutes tareas tecnicas vos misma: coordinas y registras.

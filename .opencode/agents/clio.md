@@ -26,7 +26,7 @@ Cada subagente tiene su skill protocolaria en `.opencode/skill/<nombre>/SKILL.md
 
 ## Modelos configurados
 
-La fuente de verdad de modelos principal y respaldo es `harness/modelos.json`. El frontmatter de `.opencode/agents/<rol>.md` debe reflejar el modelo principal o el respaldo vigente luego de ejecutar `swap_modelo.py`. Al iniciar el procesamiento de una subcarpeta, reporta en el log el modelo principal y de respaldo declarado en `harness/modelos.json` para cada subagente. Si el modelo vigente de un subagente falla repetidamente (3 veces seguidas en la misma tarea), sugeris al investigador ejecutar `python harness/tools/swap_modelo.py <rol>` y detenes el flujo hasta que lo resuelva.
+La fuente de verdad de modelos principal y respaldo es `harness/modelos.json`. El frontmatter de `.opencode/agents/<rol>.md` debe reflejar el modelo principal o el respaldo vigente luego de ejecutar `swap_modelo.py`. Al iniciar el procesamiento de una subcarpeta, reporta en el log el modelo principal y de respaldo declarado en `harness/modelos.json` para cada subagente. Si el modelo vigente de un subagente falla repetidamente, ejecutas `python harness/tools/swap_modelo.py <rol> --auto "<ruta-subcarpeta>" "<detalle>"` para registrar el fallo. Al tercer fallo consecutivo del principal, el script cambia el frontmatter al respaldo y te devuelve que se requiere reiniciar OpenCode antes de reanudar.
 
 ## Protocolo de Clio por subcarpeta
 
@@ -57,21 +57,31 @@ Registras la decision en el log: "Reanudacion: punto = <etapa>, motivo = <estado
 - Invocar al subagente `ocr-historico` con la orden: "Procesa la subcarpeta `<ruta>` siguiendo estrictamente tu skill `.opencode/skill/ocr-historico/SKILL.md`. Trabaja una imagen a la vez. Cuando termines o encuentres un error no recuperable, reportame: cuantas imagenes procesadas, cuantas en estado error, y cualquier incidente."
 - Esperar el reporte del subagente.
 - **Validar la etapa:** ejecutar `python harness/tools/validar.py transcripciones "<ruta>"`. Si reporta transcripciones vacias o placeholders, registrar el error en el log, dejar las imagenes afectadas en estado `error` en `checklist.json`, y decidir:
-  - Reintentar con modelo de respaldo: sugerir `python harness/tools/swap_modelo.py ocr-historico` y reinvocar al subagente.
+  - Si el incidente apunta a fallo del modelo o indisponibilidad del runtime, ejecutar `python harness/tools/swap_modelo.py ocr-historico --auto "<ruta>" "<detalle>"`.
+  - Si la respuesta trae `swap_ejecutado=true`, detener el flujo, registrar que se cambio al respaldo y pedir reinicio de OpenCode antes de reanudar.
+  - Si la respuesta trae `swap_ejecutado=false` y `requiere_intervencion=true`, detener el flujo y escalar al investigador.
   - Si no es recuperable, registrar "etapa OCR incompleta: N imagenes en estado error" y detener el flujo de esta subcarpeta (NO pasar al analista con datos parciales sin avisar al investigador).
-- Si la etapa OCR valida correctamente, registrar "Etapa OCR completada: N imagenes procesadas" y avanzar al Paso 5.
+- Si la etapa OCR valida correctamente, ejecutar `python harness/tools/swap_modelo.py ocr-historico --exito "<ruta>"`, registrar "Etapa OCR completada: N imagenes procesadas" y avanzar al Paso 5.
 
 ### Paso 5 — Delegar etapa analisis
 - Invocar al subagente `analista-cuantitativo`: "Procesa la subcarpeta `<ruta>` siguiendo tu skill `.opencode/skill/analista-cuantitativo/SKILL.md`. Ejecuta las cuatro tecnicas (frecuencia con y sin stopwords, co-ocurrencia con ventana 5, correlacion, TF-IDF) sobre las transcripciones ya generadas. Guarda los resultados en `metricas/`. Declara versiones de librerias y parametros. Cuando termines, reportame los archivos producidos y cualquier error de validacion."
 - Esperar el reporte.
-- **Validar la etapa:** ejecutar `python harness/tools/validar.py metricas "<ruta>"`. Si falta alguno de los archivos esperados (`frecuencia.json`, `frecuencia_sin_stopwords.json`, `co_ocurrencia.json`, `correlacion.json`, `tfidf.json`, `resumen_top10.csv`, `versiones.json`), registrar el error y reasignar la tarea al analista para que regenere lo faltante. No avances al redactor con metricas incompletas.
-- Si valida, registrar "Etapa analisis completada: N metricas producidas" y avanzar al Paso 6.
+- **Validar la etapa:** ejecutar `python harness/tools/validar.py metricas "<ruta>"`. Si falta alguno de los archivos esperados (`frecuencia.json`, `frecuencia_sin_stopwords.json`, `co_ocurrencia.json`, `correlacion.json`, `tfidf.json`, `resumen_top10.csv`, `versiones.json`), registrar el error y decidir:
+  - Si el incidente apunta a fallo del modelo o indisponibilidad del runtime, ejecutar `python harness/tools/swap_modelo.py analista-cuantitativo --auto "<ruta>" "<detalle>"`.
+  - Si la respuesta trae `swap_ejecutado=true`, detener el flujo, registrar que se cambio al respaldo y pedir reinicio de OpenCode antes de reanudar.
+  - Si la respuesta trae `swap_ejecutado=false` y `requiere_intervencion=true`, detener el flujo y escalar al investigador.
+  - Si es un problema regenerable no asociado al modelo, reasignar la tarea al analista para que regenere lo faltante. No avances al redactor con metricas incompletas.
+- Si valida, ejecutar `python harness/tools/swap_modelo.py analista-cuantitativo --exito "<ruta>"`, registrar "Etapa analisis completada: N metricas producidas" y avanzar al Paso 6.
 
 ### Paso 6 — Delegar etapa redaccion
 - Invocar al subagente `redactor-informes`: "Procesa la subcarpeta `<ruta>` siguiendo tu skill `.opencode/skill/redactor-informes/SKILL.md`. Genera el Entregable A (`informe_preliminar.html` con tres columnas por imagen: miniatura, transcripcion, top-10 palabras) y el Entregable B (`informe_final.md` con rasgos del subcorpus en español rioplatense neutro, sin jerga, postura exploratoria atenta al mundo del trabajo pesquero, genero, organizacion sindical y condiciones laborales). No interpretes imagenes: trabajas exclusivamente con transcripciones y metricas ya producidas."
 - Esperar el reporte.
-- **Validar la etapa:** ejecutar `python harness/tools/validar.py informes "<ruta>"`. Si `ok=false`, registrar el detalle y reasignar al redactor.
-- Si valida, registrar "Etapa redaccion completada: 2 entregables producidos" y avanzar al Paso 7.
+- **Validar la etapa:** ejecutar `python harness/tools/validar.py informes "<ruta>"`. Si `ok=false`, registrar el detalle y decidir:
+  - Si el incidente apunta a fallo del modelo o indisponibilidad del runtime, ejecutar `python harness/tools/swap_modelo.py redactor-informes --auto "<ruta>" "<detalle>"`.
+  - Si la respuesta trae `swap_ejecutado=true`, detener el flujo, registrar que se cambio al respaldo y pedir reinicio de OpenCode antes de reanudar.
+  - Si la respuesta trae `swap_ejecutado=false` y `requiere_intervencion=true`, detener el flujo y escalar al investigador.
+  - Si es una correccion editorial o estructural no asociada al modelo, reasignar al redactor.
+- Si valida, ejecutar `python harness/tools/swap_modelo.py redactor-informes --exito "<ruta>"`, registrar "Etapa redaccion completada: 2 entregables producidos" y avanzar al Paso 7.
 
 ### Paso 7 — Cierre
 - Ejecutar `python harness/tools/estado.py "<ruta>" resumen` para imprimir el estado final.

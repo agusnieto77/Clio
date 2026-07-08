@@ -4,6 +4,76 @@
   "skills": {
     "paths": [".opencode/skill"]
   },
+  "agent": {
+    "clio": {
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "edit": {
+          "*": "ask",
+          "Fuentes/**": "allow"
+        },
+        "bash": {
+          "*": "ask",
+          "python harness/tools/*.py": "allow",
+          "python harness/tools/*.py *": "allow"
+        }
+      }
+    },
+    "ocr-historico": {
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "edit": {
+          "*": "ask",
+          "Fuentes/**": "allow"
+        },
+        "bash": {
+          "*": "ask",
+          "python harness/tools/*.py": "allow",
+          "python harness/tools/*.py *": "allow"
+        }
+      }
+    },
+    "analista-cuantitativo": {
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "edit": {
+          "*": "ask",
+          "Fuentes/**": "allow"
+        },
+        "bash": {
+          "*": "ask",
+          "python harness/tools/*.py": "allow",
+          "python harness/tools/*.py *": "allow"
+        }
+      }
+    },
+    "redactor-informes": {
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "edit": {
+          "*": "ask",
+          "Fuentes/**": "allow"
+        },
+        "bash": {
+          "*": "ask",
+          "python harness/tools/*.py": "allow",
+          "python harness/tools/*.py *": "allow"
+        }
+      }
+    }
+  },
   "permission": {
     "bash": {
       "python harness/tools/*": "allow",

@@ -83,10 +83,17 @@ Registras en el log:
    python harness/tools/validar.py transcripciones "<ruta>"
    ```
 4. Segun el reporte de validacion:
-   - Si todas las transcripciones validan (no vacias, no placeholders): escribir `[FECHA HORA] ETAPA OCR COMPLETADA - <N> imagenes procesadas` y avanzar al Paso 5.
-   - Si hay transcripciones invalidas: escribir `[FECHA HORA] VALIDACION FALLIDA - etapa: ocr - detalle: <M> imagenes con transcripcion vacia/placeholder`. Decidir:
-     - Si el modelo principal fallo repetidamente, sugerir al investigador ejecutar `python harness/tools/swap_modelo.py ocr-historico` y detener.
-     - Si son pocas imagenes puntuales que el OCR no pudo leer, dejarlas en estado `error` en `checklist.json`, registrar `IMAGENES EN ERROR` con la lista, y decidir con el investigador si avanzar al analisis con el subconjunto valido o detener. Por defecto: detener el flujo de la subcarpeta.
+   - Si todas las transcripciones validan (no vacias, no placeholders): ejecutar `python harness/tools/swap_modelo.py ocr-historico --exito "<ruta>"`, escribir `[FECHA HORA] ETAPA OCR COMPLETADA - <N> imagenes procesadas` y avanzar al Paso 5.
+   - Si hay transcripciones invalidas: escribir `[FECHA HORA] VALIDACION FALLIDA - etapa: ocr - detalle: <M> imagenes con transcripcion vacia/placeholder`.
+   - Si el incidente apunta a fallo del modelo o indisponibilidad del runtime, ejecutar:
+     ```
+     python harness/tools/swap_modelo.py ocr-historico --auto "<ruta>" "<detalle>"
+     ```
+     y leer el JSON de salida.
+   - Si el JSON devuelve `swap_ejecutado=true`: escribir `SWAP AUTOMATICO DE MODELO`, detener el flujo y pedir reinicio de OpenCode antes de reanudar.
+   - Si devuelve `swap_ejecutado=false` y `requiere_intervencion=true`: detener y escalar al investigador porque el respaldo tambien fallo o no hay mas fallback disponible.
+   - Si devuelve `swap_ejecutado=false` y `requiere_intervencion=false`: dejar constancia del contador acumulado y seguir tratando el incidente como fallo puntual de la imagen.
+   - Si son pocas imagenes puntuales que el OCR no pudo leer, dejarlas en estado `error` en `checklist.json`, registrar `IMAGENES EN ERROR` con la lista, y decidir con el investigador si avanzar al analisis con el subconjunto valido o detener. Por defecto: detener el flujo de la subcarpeta.
 
 ## Paso 5 — Etapa analisis
 
@@ -98,8 +105,14 @@ Registras en el log:
    python harness/tools/validar.py metricas "<ruta>"
    ```
 4. Segun el reporte:
-   - Si los siete archivos esperados existen (`frecuencia.json`, `frecuencia_sin_stopwords.json`, `co_ocurrencia.json`, `correlacion.json`, `tfidf.json`, `resumen_top10.csv`, `versiones.json`): escribir `[FECHA HORA] ETAPA ANALISIS COMPLETADA` y avanzar al Paso 6.
-   - Si falta alguno: escribir `[FECHA HORA] VALIDACION FALLIDA - etapa: analisis - detalle: faltan <lista>`. Reasignar la tarea al analista con instruccion de regenerar lo faltante. No avanzar al redactor con metricas incompletas.
+   - Si los siete archivos esperados existen (`frecuencia.json`, `frecuencia_sin_stopwords.json`, `co_ocurrencia.json`, `correlacion.json`, `tfidf.json`, `resumen_top10.csv`, `versiones.json`): ejecutar `python harness/tools/swap_modelo.py analista-cuantitativo --exito "<ruta>"`, escribir `[FECHA HORA] ETAPA ANALISIS COMPLETADA` y avanzar al Paso 6.
+   - Si falta alguno: escribir `[FECHA HORA] VALIDACION FALLIDA - etapa: analisis - detalle: faltan <lista>`.
+   - Si el incidente apunta a fallo del modelo o indisponibilidad del runtime, ejecutar:
+     ```
+     python harness/tools/swap_modelo.py analista-cuantitativo --auto "<ruta>" "<detalle>"
+     ```
+     y leer el JSON de salida con la misma logica usada en OCR.
+   - Si el problema no esta asociado al modelo, reasignar la tarea al analista con instruccion de regenerar lo faltante. No avanzar al redactor con metricas incompletas.
 
 ## Paso 6 — Etapa redaccion
 
@@ -110,8 +123,14 @@ Registras en el log:
    ```
    python harness/tools/validar.py informes "<ruta>"
    ```
-4. Si `ok=false`, registrar el detalle y reasignar al redactor.
-5. Si ambos validan, escribir `[FECHA HORA] ETAPA REDACCION COMPLETADA - 2 entregables producidos` y avanzar al Paso 7.
+4. Si `ok=false`, registrar el detalle.
+5. Si el incidente apunta a fallo del modelo o indisponibilidad del runtime, ejecutar:
+   ```
+   python harness/tools/swap_modelo.py redactor-informes --auto "<ruta>" "<detalle>"
+   ```
+   y leer el JSON de salida con la misma logica usada en OCR.
+6. Si el problema no esta asociado al modelo, reasignar al redactor.
+7. Si ambos validan, ejecutar `python harness/tools/swap_modelo.py redactor-informes --exito "<ruta>"`, escribir `[FECHA HORA] ETAPA REDACCION COMPLETADA - 2 entregables producidos` y avanzar al Paso 7.
 
 ## Paso 7 — Cierre
 
@@ -137,10 +156,9 @@ Clio nunca continua el flujo de una subcarpeta con datos incompletos sin autoriz
 
 ## Sobre el swap de modelos
 
-Si un subagente reporta 3 fallos seguidos del modelo principal, Clio:
+Si un subagente reporta fallos de modelo, Clio ejecuta `swap_modelo.py --auto` para registrar cada fallo en el `checklist.json` de esa subcarpeta.
 
-1. Escribe en el log `MODELO PRINCIPAL FALLA REPETIDA - agente: <rol>`.
-2. Sugiere al investigador ejecutar `python harness/tools/swap_modelo.py <rol>`.
-3. Detiene el flujo de la subcarpeta hasta que el swap este hecho o el investigador decida continuar con el principal.
-
-Clio no ejecuta el swap ella misma, porque eso modifica archivos del runtime y requiere reinicio. Es decision del investigador.
+1. Antes del umbral, el script solo incrementa el contador de fallos consecutivos.
+2. Al tercer fallo consecutivo del principal, el script cambia el `model:` del agente al respaldo.
+3. Despues del cambio, Clio SIEMPRE detiene el flujo y pide reiniciar OpenCode antes de reanudar, porque el runtime actual no recarga el frontmatter en caliente.
+4. Si tambien falla el respaldo, Clio detiene y escala al investigador.

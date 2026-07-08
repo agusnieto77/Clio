@@ -68,6 +68,8 @@ python harness/tools/configurar_modelos.py --preset recommended
 
 Clio ya trae un `harness/modelos.json` listo para usar. El asistente reescribe ese archivo y además sincroniza el campo `model:` de `.opencode/agents/*.md`. Después del cambio, **reiniciá OpenCode**.
 
+El harness también puede registrar fallos consecutivos por subcarpeta con `python harness/tools/swap_modelo.py <rol> --auto "<ruta-subcarpeta>" "<detalle>"`. Esto aplica a `ocr-historico`, `analista-cuantitativo` y `redactor-informes`. Al tercer fallo consecutivo del modelo principal, el script cambia el `model:` del agente al respaldo y deja constancia en `checklist.json` y `log_clio.md`. El cambio sigue requiriendo reinicio de OpenCode antes de reanudar.
+
 > Aclaración: `harness/modelos.json` está **trackeado en el repo** intencionalmente, de modo que el repositorio publicado refleje siempre una configuración funcional. Los presets `modelos.default.json` y `modelos.recommended.json` son plantillas que el asistente guiado puede copiar a `modelos.json`; **no se cargan en runtime**. Los agentes en runtime leen su propio frontmatter `model:`.
 
 ## Uso rápido
