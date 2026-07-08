@@ -12,7 +12,7 @@
         "nota": "Punto de partida simple para orquestacion textual."
       },
       "respaldo": {
-        "id_opencode": "minimax/MiniMax-M3",
+        "id_opencode": "google/gemini-2.5-flash-lite",
         "nota": "Respaldo si el principal no esta disponible o falla repetidamente."
       }
     },
@@ -20,11 +20,11 @@
       "rol": "Subagente OCR. Transcribe fotografias de documentacion mecanografiada y prensa del siglo XX.",
       "necesita_vision": true,
       "principal": {
-        "id_opencode": "minimax/MiniMax-M3",
+        "id_opencode": "opencode/mimo-v2.5-free",
         "nota": "Modelo principal de vision para OCR historico."
       },
       "respaldo": {
-        "id_opencode": "opencode/mimo-v2.5-free",
+        "id_opencode": "google/gemini-2.5-flash-lite",
         "nota": "Respaldo de vision si el principal falla."
       }
     },
@@ -36,7 +36,7 @@
         "nota": "Modelo de texto suficiente para lanzar y reportar calculos deterministas."
       },
       "respaldo": {
-        "id_opencode": "minimax/MiniMax-M3",
+        "id_opencode": "google/gemini-2.5-flash-lite",
         "nota": "Respaldo si el principal no arranca o no esta disponible."
       }
     },
@@ -48,7 +48,7 @@
         "nota": "Punto de partida simple para redaccion inicial."
       },
       "respaldo": {
-        "id_opencode": "minimax/MiniMax-M3",
+        "id_opencode": "google/gemini-2.5-flash-lite",
         "nota": "Respaldo de mayor capacidad si el principal falla o no alcanza."
       }
     }
