@@ -16,7 +16,7 @@ Fuentes/
 
 ## 2. Correr el flujo completo
 
-Con OpenCode:
+Desde una sesión OpenCode abierta en este repo (recordá: OpenCode es el runtime nativo del harness):
 
 ```text
 /clio Fuentes/MiSubcorpus
@@ -46,7 +46,9 @@ Fuentes/MiSubcorpus/
 
 El estado vive en el filesystem. Basta volver a invocar Clio sobre la misma subcarpeta; `estado.py` reconstruye el punto de reanudación.
 
-## 5. Herramientas manuales útiles
+## 5. Fallback — herramientas manuales
+
+Solo para debug o cuando no podés abrir OpenCode. Sin OpenCode perdés la orquestación unificada y el comando `/clio`: tenés que invocar los scripts uno a uno en el orden correcto.
 
 ```bash
 python harness/tools/estado.py Fuentes/MiSubcorpus init

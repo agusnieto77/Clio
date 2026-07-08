@@ -2,9 +2,9 @@
 
 ## Requisitos mínimos
 
+- **[OpenCode](https://opencode.ai)** (runtime nativo del harness; provee el comando `/clio`, el agente `clio` y carga las skills de `.opencode/skill/`).
 - Python 3.10 o superior
 - `pip`
-- (Opcional) OpenCode u otro runtime que entienda `.opencode/`
 
 ## Dependencias
 
