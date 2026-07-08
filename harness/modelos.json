@@ -1,55 +1,55 @@
 {
-  "_doc": "Preset recommended de Clio. Es la configuracion testeada en este repo y la opcion sugerida para obtener la mejor experiencia inicial.",
+  "_doc": "Preset default de Clio. Pensado como punto de partida simple para usuarios no técnicos. El setup guiado puede copiar este archivo a modelos.json y sincronizar los agentes.",
   "version": 1,
-  "preset": "recommended",
-  "nota_runtime": "Los IDs declarados en este archivo son la fuente de verdad del harness Clio para modelos principal y respaldo. El frontmatter de .opencode/agent/<rol>.md debe reflejar el principal, salvo cuando swap_modelo.py lo haya cambiado temporalmente al respaldo. Si el investigador migra el harness a otro runtime, debe reemplazar cada id_opencode por el ID equivalente con su prefijo de proveedor.",
+  "preset": "default",
+  "nota_runtime": "Esta configuracion privilegia menor friccion para roles de texto y deja el OCR con un modelo principal de vision robusto. El frontmatter de .opencode/agent/<rol>.md debe reflejar siempre el principal vigente.",
   "agentes": {
     "clio": {
       "rol": "Orquestadora. No ejecuta tareas tecnicas. Coordina y registra.",
       "necesita_vision": false,
       "principal": {
-        "id_opencode": "minimax/MiniMax-M3",
-        "nota": "Modelo de texto razonador para planificar y delegar."
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Punto de partida simple para orquestacion textual."
       },
       "respaldo": {
-        "id_opencode": "opencode/mimo-v2.5-free",
-        "nota": "Modelo de texto anterior. Usar si el principal no esta disponible o falla repetidamente."
+        "id_opencode": "google/gemini-2.5-flash-lite",
+        "nota": "Respaldo si el principal no esta disponible o falla repetidamente."
       }
     },
     "ocr-historico": {
       "rol": "Subagente OCR. Transcribe fotografias de documentacion mecanografiada y prensa del siglo XX.",
       "necesita_vision": true,
       "principal": {
-        "id_opencode": "minimax/MiniMax-M3",
-        "nota": "Modelo con capacidad de vision para OCR historico."
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Modelo principal de vision para OCR historico."
       },
       "respaldo": {
-        "id_opencode": "opencode/mimo-v2.5-free",
-        "nota": "Respaldo de vision si el principal no puede leer una imagen o falla repetidamente."
+        "id_opencode": "google/gemini-2.5-flash-lite",
+        "nota": "Respaldo de vision si el principal falla."
       }
     },
     "analista-cuantitativo": {
       "rol": "Subagente analista. Ejecuta metricas en Python (frecuencia, co-ocurrencia, correlacion, TF-IDF).",
       "necesita_vision": false,
       "principal": {
-        "id_opencode": "minimax/MiniMax-M3",
-        "nota": "Modelo de texto. No calcula metricas: solo decide que comando Python ejecutar, lee resultados y reporta a Clio."
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Modelo de texto suficiente para lanzar y reportar calculos deterministas."
       },
       "respaldo": {
-        "id_opencode": "opencode/mimo-v2.5-free",
-        "nota": "Respaldo si el principal no arranca. Los calculos siguen siendo 100% Python determinista."
+        "id_opencode": "google/gemini-2.5-flash-lite",
+        "nota": "Respaldo si el principal no arranca o no esta disponible."
       }
     },
     "redactor-informes": {
-      "rol": "Subagente redactor. Produce informe preliminar HTML y el informe final Markdown a partir de datos ya generados.",
+      "rol": "Subagente redactor. Produce informe preliminar HTML y informe final Markdown a partir de datos ya generados.",
       "necesita_vision": false,
       "principal": {
-        "id_opencode": "minimax/MiniMax-M3",
-        "nota": "Modelo de texto de capacidad alta para redactar el informe final."
+        "id_opencode": "opencode/mimo-v2.5-free",
+        "nota": "Punto de partida simple para redaccion inicial."
       },
       "respaldo": {
-        "id_opencode": "opencode/mimo-v2.5-free",
-        "nota": "Respaldo si el principal falla."
+        "id_opencode": "google/gemini-2.5-flash-lite",
+        "nota": "Respaldo de mayor capacidad si el principal falla o no alcanza."
       }
     }
   },
