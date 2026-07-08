@@ -5,7 +5,9 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Regression tests](https://img.shields.io/badge/regression-15%20tests-green)
 
-Harness agéntico y determinista para procesar corpus documentales fotografiados: OCR histórico, métricas de minería de texto y reportes exploratorios por subcarpeta.
+Harness agéntico nativo de [OpenCode](https://opencode.ai) y determinista para procesar corpus documentales fotografiados: OCR histórico, métricas de minería de texto y reportes exploratorios por subcarpeta.
+
+Clio corre como agente nativo de OpenCode: el orquestador, las skills de los cuatro roles y el comando `/clio` viven dentro de `.opencode/`. Los scripts en `harness/tools/` son las primitivas deterministas que esos agentes invocan; sin OpenCode podés ejecutar el pipeline como scripts sueltos en modo manual, pero perdés la orquestación unificada, las validaciones entre etapas y el comando `/clio`.
 
 ## Qué hace
 
@@ -34,14 +36,13 @@ Sirve como corpus de referencia para ver la estructura completa de entrada/salid
 
 ## Requisitos
 
+- **[OpenCode](https://opencode.ai)** (runtime nativo del harness).
 - Python 3.10+
 - Dependencias Python:
 
 ```bash
 pip install -r harness/tools/requirements.txt
 ```
-
-- **Opcional pero recomendado:** OpenCode / runtime compatible con `.opencode/` para correr el comando `/clio` como flujo completo.
 
 ## Configuración inicial de modelos
 
@@ -70,7 +71,7 @@ Clio ya trae un `harness/modelos.json` listo para usar. El asistente reescribe e
 
 ## Uso rápido
 
-### Opción A — flujo completo con agentes
+### Camino canónico — flujo completo con OpenCode
 
 Desde una sesión OpenCode abierta en este repo:
 
@@ -78,7 +79,11 @@ Desde una sesión OpenCode abierta en este repo:
 /clio Fuentes/MiSubcorpus
 ```
 
-### Opción B — herramientas deterministas manuales
+OpenCode carga el agente `clio` definido en `opencode.json`, las cuatro skills de `.opencode/skill/` y el comando `/clio`. El flujo valida el estado en cada etapa y registra avance en el filesystem, así que es seguro interrumpirlo y reanudar.
+
+### Fallback — pipeline manual con scripts sueltos
+
+Útil solo para debug o cuando no podés abrir OpenCode. **Perdés la orquestación, las validaciones entre etapas y el comando `/clio`**: tenés que invocar los scripts uno a uno en el orden correcto.
 
 ```bash
 python harness/tools/estado.py Fuentes/MiSubcorpus init
