@@ -8,3 +8,4 @@ Fuentes/_tmp_*/
 harness/modelos.backup.*.json
 .DS_Store
 Thumbs.db
+.atl/
